@@ -15,7 +15,7 @@ export default function Home() {
       </header>
       <main>
         <div className={styles.grid}>
-          <Card width={332}>
+          <Card width={380}>
             <Icon name="palette" type="line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
             <h2>Color</h2>
             <p>
@@ -24,7 +24,7 @@ export default function Home() {
               selected to complement its reactive style.
             </p>
           </Card>
-          <Card width={332}>
+          <Card width={380}>
             <Icon name="apps-2" type="line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
             <h2>Components</h2>
             <p>
@@ -32,7 +32,7 @@ export default function Home() {
               your journey with Leon.
             </p>
           </Card>
-          <Card width={332}>
+          <Card width={380}>
             <Icon name="box-3" type="line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
             <h2>Iconography</h2>
             <p>
@@ -41,7 +41,7 @@ export default function Home() {
               the design and improve the user experience.
             </p>
           </Card>
-          <Card width={332}>
+          <Card width={380}>
             <Icon name="font-color" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
             <h2>Typography</h2>
             <p>
