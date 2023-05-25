@@ -1,7 +1,23 @@
 .cardContainer
-  min-width: 128px
-  min-height: 64px
-  border: 1px solid red
-  display: inline-block
-  border-radius: 10px
-  padding: 15px
+  position: relative
+
+  .body
+    position: relative
+    min-width: 128px
+    min-height: 64px
+    display: inline-block
+    border-radius: 10px
+    padding: 15px
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    border-radius: 10px
+    padding: 1.5px
+    background: var(--color-primary-border-gradient)
+    mask: linear-gradient(to right, var(--color-black), var(--color-black)) content-box, linear-gradient(to right, var(--color-black), var(--color-black))
+    mask-composite: exclude

@@ -11,6 +11,10 @@
       font-weight: var(--fontWeight-regular)
       line-height: 1.5rem
 
+  main
+    margin-top: 172px
+    margin-bottom: 32px
+
   h2
     margin: 13px 0
     color: var(--color-white)
@@ -21,3 +25,13 @@
   color: var(--color-white)
   font-size: 4rem
   font-weight: var(--fontWeight-bold)
+
+.grid
+  --card-width: 332px
+  --grid-gap: 48px
+
+  width: calc((var(--card-width) * 2) + var(--grid-gap))
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: var(--grid-gap)
+  margin: 0 auto
