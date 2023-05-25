@@ -1,10 +1,4 @@
 import './styles/main.sass'
-import { Source_Sans_Pro } from 'next/font/google'
-
-const sourceSansPro = Source_Sans_Pro({
-  weight: ['200', '300', '400', '600', '700', '900'],
-  subsets: ['latin']
-})
 
 export const metadata = {
   title: 'Aurora - Leon\'s UI bricks',
@@ -18,7 +12,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sourceSansPro.className}>{children}</body>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }

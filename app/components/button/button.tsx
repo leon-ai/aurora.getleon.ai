@@ -4,6 +4,6 @@ interface Props {
   children: React.ReactNode
 }
 
-export function Button({ children }: Props) {
+export default function Button({ children }: Props) {
   return <button>{children}</button>
 }
