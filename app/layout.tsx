@@ -1,7 +1,10 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './styles/main.sass'
+import { Source_Sans_Pro } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const sourceSansPro = Source_Sans_Pro({
+  weight: ['200', '300', '400', '600', '700', '900'],
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={sourceSansPro.className}>{children}</body>
     </html>
   )
 }
