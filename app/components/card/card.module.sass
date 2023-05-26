@@ -1,14 +1,9 @@
 .cardContainer
   position: relative
-
-  .body
-    position: relative
-    min-width: 128px
-    min-height: 64px
-    display: inline-block
-    border-radius: 10px
-    padding: 24px
-
+  height: auto
+  background-color: var(--color-light-black)
+  border-radius: 10px
+  transition: background-color var(--transitionDuration-main), background var(--transitionDuration-main)
   &::before
     content: ''
     position: absolute
@@ -21,3 +16,16 @@
     background: var(--color-primary-border-gradient)
     mask: linear-gradient(to right, var(--color-black), var(--color-black)) content-box, linear-gradient(to right, var(--color-black), var(--color-black))
     mask-composite: exclude
+  &:hover
+    background-color: var(--color-black-hover)
+    &::before
+      background: var(--color-primary-border-gradient-hover)
+
+  .body
+    position: relative
+    min-width: 128px
+    min-height: 64px
+    padding: 24px
+    border-radius: 10px
+
+
