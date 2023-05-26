@@ -20,6 +20,10 @@
     background-color: var(--color-black-hover)
     &::before
       background: var(--color-primary-border-gradient-hover)
+  &.noBorder::before
+    background: none
+    mask: unset
+    mask-composite: unset
 
   .body
     position: relative
@@ -27,5 +31,3 @@
     min-height: 64px
     padding: 24px
     border-radius: 10px
-
-
