@@ -7,6 +7,7 @@ interface Props {
   size?: 'xxs' | 'xs' | 'sm' | '1x' | 'lg' | 'xl' | '2x' | '3x' | '4x' | '5x' | '6x' | '7x' | '8x' | '9x' | '10x'
   bgType?: undefined | 'square' | 'round'
   bgColor?: undefined | string
+  style?: React.CSSProperties
 }
 
 /**
@@ -18,7 +19,8 @@ export default function Icon({
   color = 'inherit',
   size = '1x',
   bgType = undefined,
-  bgColor = undefined
+  bgColor = undefined,
+  style = {}
 }: Props) {
   let className = `ri-${name}`
   let borderRadius
@@ -41,7 +43,8 @@ export default function Icon({
         display: 'inline-block',
         padding: 13,
         borderRadius,
-        backgroundColor
+        backgroundColor,
+        ...style
     }}>
       <i
         className={`${className} ri-${size}`}
