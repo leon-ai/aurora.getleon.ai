@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import Card from '@/app/components/card'
-import Icon from '@/app/components/icon'
+import Card from '@/app/components/aurora/card'
+import Icon from '@/app/components/aurora/icon'
 
 import styles from './page.module.sass'
 
