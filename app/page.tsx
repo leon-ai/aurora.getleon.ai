@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import Header from '@/app/components/header'
 import Card from '@/app/components/aurora/card'
 import Icon from '@/app/components/aurora/icon'
 
@@ -8,23 +9,11 @@ import styles from './page.module.sass'
 export default function Home() {
   return (
     <div className={`container ${styles.pageContainer}`}>
-      <svg className={styles.bgGrid} width="971" viewBox="0 0 971 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M970 0V191.5C970 195.918 966.418 199.5 962 199.5H485.5H8.99999C4.58172 199.5 1 195.918 1 191.5V0M243.25 199.5V0M727.75 199.5V0M970 99.75H1" stroke="url(#paint0_linear_7_59)" strokeDasharray="5 5"/>
-        <defs>
-          <linearGradient id="paint0_linear_7_59" x1="1" y1="0" x2="79.8066" y2="382.775" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#1C75DB" stopOpacity="0.75"/>
-            <stop offset="0.5" stopColor="#1C75DB" stopOpacity="0.25"/>
-            <stop offset="1" stopColor="#1C75DB" stopOpacity="0.75"/>
-          </linearGradient>
-        </defs>
-      </svg>
-      <header>
-        <h1 className={styles.title}>Aurora</h1>
-        <p>
-          The <strong>UI</strong> bricks that power up Leon,<br />
-          your open-source personal assistant.
-        </p>
-      </header>
+      <Header
+        title="Aurora"
+        description={<>The <strong>UI</strong> bricks that power up Leon,<br />
+          your open-source personal assistant.</>}
+      />
       <main>
         <div className={styles.grid}>
           <Link href="/color">
