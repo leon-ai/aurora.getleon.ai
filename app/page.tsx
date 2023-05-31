@@ -4,11 +4,12 @@ import Header from '@/app/components/header'
 import Card from '@/app/components/aurora/card'
 import Icon from '@/app/components/aurora/icon'
 
+import globalStyles from './global.module.sass'
 import styles from './page.module.sass'
 
 export default function Home() {
   return (
-    <div className={`container ${styles.pageContainer}`}>
+    <div className={`container ${globalStyles.pageContainer}`}>
       <Header
         title="Aurora"
         description={<>The <strong>UI</strong> bricks that power up Leon,<br />

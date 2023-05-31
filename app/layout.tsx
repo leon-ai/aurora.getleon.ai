@@ -1,6 +1,8 @@
+import type { Metadata } from 'next'
+
 import './styles/main.sass'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Aurora - Leon\'s UI bricks',
   description: 'Aurora - Leon\'s UI bricks',
 }
