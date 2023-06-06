@@ -10,6 +10,11 @@ interface Props {
   hasBorder?: boolean
 }
 
+/**
+ * TODO: this component should be called "WidgetWrapper" instead of "Card"
+ * TODO: as "Card" will be used within "WidgetWrapper". Cf. Forecast design
+ */
+
 export default function Card({
   children,
   width = 'auto',
