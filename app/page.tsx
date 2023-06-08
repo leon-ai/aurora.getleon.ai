@@ -17,10 +17,10 @@ export default function Home() {
       />
       <main>
         <div className={styles.grid}>
-          <Link href="/color">
+          <Link href="/colors">
             <Card width={380} height={234}>
               <Icon name="palette" type="line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
-              <h2>Color</h2>
+              <h2>Colors</h2>
               <p>
                 Discover the strategic use of color in Aurora's<br />
                 design system, where every hue is carefully<br />
@@ -35,6 +35,15 @@ export default function Home() {
               <p>
                 Engage with the building blocks that shape<br />
                 your journey with Leon.
+              </p>
+            </Card>
+          </Link>
+          <Link href="/design-tokens">
+            <Card width={380} height={234}>
+              <Icon name="copper-coin-line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
+              <h2>Design Tokens</h2>
+              <p>
+                Browse Aurora's pre-defined design tokens that ensure consistent visual elements across all components of Leon.
               </p>
             </Card>
           </Link>
