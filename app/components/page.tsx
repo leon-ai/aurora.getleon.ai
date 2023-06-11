@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import Header from '@/app/components/header'
 import Section from '@/app/components/section'
 
+import Text from '@/app/aurora/components/text'
+
 import globalStyles from '@/app/global.module.sass'
 
 export const metadata: Metadata = {
@@ -18,9 +20,6 @@ export default function Component() {
           your journey with Leon.</>}
       />
       <main>
-        <Section title="Button">
-          ...
-        </Section>
         <Section title="Card / Widget Wrapper">
           ...
         </Section>
@@ -45,7 +44,7 @@ export default function Component() {
         <Section title="Loader">
           ...
         </Section>
-        <Section title="Radio Button">
+        <Section title="Radio Text">
           ...
         </Section>
         <Section title="Select">
@@ -64,7 +63,16 @@ export default function Component() {
           ...
         </Section>
         <Section title="Text">
-          ...
+          <Text>Text</Text>
+          <Text fontSize="xs">Text</Text>
+          <Text fontSize="sm">Text</Text>
+          <Text fontSize="md">Text</Text>
+          <Text fontSize="lg">Text</Text>
+          <Text fontSize="xl">Text</Text>
+          <Text>Text</Text>
+          <Text fontWeight="regular">Text</Text>
+          <Text fontWeight="semi-bold">Text</Text>
+          <Text secondary>Text</Text>
         </Section>
         <Section title="Textarea">
           ...
