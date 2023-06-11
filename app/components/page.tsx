@@ -63,17 +63,15 @@ export default function Component() {
           ...
         </Section>
         <Section title="Text">
+          <Text fontSize="xs">Text xs</Text>
+          <Text fontSize="sm">Text sm</Text>
+          <Text fontSize="md">Text md</Text>
+          <Text fontSize="lg">Text lg</Text>
+          <Text fontSize="xl">Text xl</Text>
           <Text>Text</Text>
-          <Text fontSize="xs">Text</Text>
-          <Text fontSize="sm">Text</Text>
-          <Text fontSize="md">Text</Text>
-          <Text fontSize="lg">Text</Text>
-          <Text fontSize="xl">Text</Text>
-          <Text>Text</Text>
-          <Text fontWeight="regular">Text</Text>
-          <Text fontWeight="semi-bold">Text</Text>
-          <Text secondary>Text</Text>
-          <Text tertiary>Text</Text>
+          <Text fontWeight="regular">Text regular</Text>
+          <Text fontWeight="semi-bold">Text semi-bold</Text>
+          <Text secondary>Text secondary</Text>
         </Section>
         <Section title="Textarea">
           ...
