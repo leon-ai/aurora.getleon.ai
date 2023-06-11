@@ -73,6 +73,7 @@ export default function Component() {
           <Text fontWeight="regular">Text</Text>
           <Text fontWeight="semi-bold">Text</Text>
           <Text secondary>Text</Text>
+          <Text tertiary>Text</Text>
         </Section>
         <Section title="Textarea">
           ...
