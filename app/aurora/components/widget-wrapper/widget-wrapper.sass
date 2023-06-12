@@ -4,21 +4,10 @@
   position: relative
   display: inline-block
   height: auto
-  background-color: var(--a-color-background-surface-primary)
   border-radius: 12px // TODO: token
   padding: 30px 16px // TODO: token
   width: 314px
+  background: linear-gradient(var(--a-color-background-surface-primary), var(--a-color-background-surface-primary)) padding-box, linear-gradient(135deg, rgba(28, 117, 219, 0.4) 0%, rgba(237, 41, 122, 0.1) 100%) border-box
+  border: 1px solid transparent
   // TODO: transition token
   transition: background-color var(--transitionDuration-main), transform var(--transitionDuration-main)
-  &::before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    border-radius: 12px // TODO: token
-    padding: 1px
-    background: linear-gradient(135deg, rgba(28, 117, 219, 0.4) 0%, rgba(237, 41, 122, 0.1) 100%)
-    mask: linear-gradient(to right, var(--color-black), var(--color-black)) content-box, linear-gradient(to right, var(--color-black), var(--color-black))
-    mask-composite: exclude
