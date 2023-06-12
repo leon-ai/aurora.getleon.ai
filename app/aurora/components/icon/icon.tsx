@@ -1,13 +1,26 @@
-import type React from 'react'
+import React from 'react'
+import classNames from 'classnames'
+
+import type { Color, Size } from '../../lib/types'
+
+import './icon.sass'
 
 interface Props {
-  name: string
-  type?: undefined | 'line' | 'fill'
-  color?: string
-  size?: 'xxs' | 'xs' | 'sm' | '1x' | 'lg' | 'xl' | '2x' | '3x' | '4x' | '5x' | '6x' | '7x' | '8x' | '9x' | '10x'
-  bgType?: undefined | 'square' | 'round'
-  bgColor?: undefined | string
-  style?: React.CSSProperties
+  name?: string
+  svg?: React.ReactNode
+  type?: 'line' | 'fill'
+  color?: Color
+  size?: Size
+  bgShape?: 'square' | 'circle'
+  bgColor?: Color
+}
+
+const REMIX_SIZE_MAPPING = {
+  xs: 'xs',
+  sm: 'sm',
+  md: '1x',
+  lg: 'lg',
+  xl: 'xl'
 }
 
 /**
@@ -15,41 +28,42 @@ interface Props {
  */
 export default function Icon({
   name,
-  type = undefined,
-  color = 'inherit',
-  size = '1x',
-  bgType = undefined,
-  bgColor = undefined,
-  style = {}
+  svg,
+  type = 'line',
+  color,
+  size = 'md',
+  bgShape,
+  bgColor
 }: Props) {
-  let className = `ri-${name}`
-  let borderRadius
+  let iconClassName = `ri-${name}`
   let backgroundColor
 
   if (type) {
-    className = `${className}-${type}`
+    iconClassName = `${iconClassName}-${type}`
   }
-  if (bgType) {
-    borderRadius = bgType === 'round' ? '50%' : 10
-  }
+
   if (bgColor) {
     backgroundColor = bgColor
   }
 
   return (
     <div
-      className="aurora-icon"
-      style={{
-        display: 'inline-block',
-        padding: 13,
-        borderRadius,
-        backgroundColor,
-        ...style
-    }}>
-      <i
-        className={`${className} ri-${size}`}
-        style={{ color }}
-      />
+      className={classNames('aurora-icon', {
+        [`aurora-icon--${size}`]: size,
+        [`aurora-icon--${bgShape}`]: bgShape,
+        [`aurora-icon--bg-${bgColor}`]: bgColor,
+        [`aurora-icon--${color}`]: color
+      })}
+    >
+      {svg ? (
+        svg
+      ) : (
+        <i
+          className={classNames(iconClassName, {
+            [`ri-${REMIX_SIZE_MAPPING[size]}`]: size
+          })}
+        />
+      )}
     </div>
   )
 }

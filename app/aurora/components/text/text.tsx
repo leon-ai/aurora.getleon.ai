@@ -1,6 +1,8 @@
 import type React from 'react'
 import classNames from 'classnames'
 
+import type { Size } from '../../lib/types'
+
 import './text.sass'
 
 /*const FONT_SIZES = {
@@ -14,7 +16,7 @@ import './text.sass'
 interface Props {
   children: React.ReactNode
   // fontSize?: typeof FONT_SIZES[keyof typeof FONT_SIZES]
-  fontSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  fontSize?: Size
   fontWeight?: 'regular' | 'semi-bold'
   secondary?: boolean
 }
