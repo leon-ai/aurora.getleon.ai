@@ -4,6 +4,7 @@ import Header from '@/app/components/header'
 import Section from '@/app/components/section'
 
 import Text from '@/app/aurora/components/text'
+import WidgetWrapper from '@/app/aurora/components/widget-wrapper'
 
 import globalStyles from '@/app/global.module.sass'
 
@@ -20,7 +21,7 @@ export default function Component() {
           your journey with Leon.</>}
       />
       <main>
-        <Section title="Card / Widget Wrapper">
+        <Section title="Card">
           ...
         </Section>
         <Section title="Checkbox">
@@ -44,7 +45,7 @@ export default function Component() {
         <Section title="Loader">
           ...
         </Section>
-        <Section title="Radio Text">
+        <Section title="Radio">
           ...
         </Section>
         <Section title="Select">
@@ -75,6 +76,11 @@ export default function Component() {
         </Section>
         <Section title="Textarea">
           ...
+        </Section>
+        <Section title="Widget Wrapper">
+          <WidgetWrapper>
+            <Text fontSize="xl" fontWeight="semi-bold">42</Text>
+          </WidgetWrapper>
         </Section>
       </main>
     </div>
