@@ -5,6 +5,7 @@ import Section from '@/app/components/section'
 
 import Text from '@/app/aurora/components/text'
 import WidgetWrapper from '@/app/aurora/components/widget-wrapper'
+import Flexbox from '@/app/aurora/components/flexbox'
 
 import globalStyles from '@/app/global.module.sass'
 
@@ -79,7 +80,15 @@ export default function Component() {
         </Section>
         <Section title="Widget Wrapper">
           <WidgetWrapper>
-            <Text fontSize="xl" fontWeight="semi-bold">42</Text>
+            <Flexbox alignItems="center" justifyContent="center">
+              <Text fontSize="xl" fontWeight="semi-bold">42</Text>
+            </Flexbox>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <Flexbox alignItems="center" justifyContent="center" flexDirection="column" rowGap="xs">
+              <Text fontSize="lg" fontWeight="semi-bold">Paris</Text>
+              <Text secondary>Thursday, 1 June</Text>
+            </Flexbox>
           </WidgetWrapper>
         </Section>
       </main>
