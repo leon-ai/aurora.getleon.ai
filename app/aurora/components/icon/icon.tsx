@@ -10,7 +10,7 @@ interface Props {
   svg?: React.ReactNode
   type?: 'line' | 'fill'
   color?: Color
-  size?: Size
+  size?: Size | 'xxl'
   bgShape?: 'square' | 'circle'
   bgColor?: Color
 }
@@ -20,7 +20,8 @@ const REMIX_SIZE_MAPPING = {
   sm: 'sm',
   md: '1x',
   lg: 'lg',
-  xl: 'xl'
+  xl: 'xl',
+  xxl: '2x'
 }
 
 /**
