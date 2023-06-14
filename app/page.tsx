@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import Header from '@/app/components/header'
-import Card from '@/app/aurora/components/card'
+import Card from '@/app/components/card'
 import Icon from '@/app/components/icon'
 
 import globalStyles from './global.module.sass'
