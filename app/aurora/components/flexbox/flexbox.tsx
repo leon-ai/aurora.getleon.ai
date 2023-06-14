@@ -5,8 +5,8 @@ import './flexbox.sass'
 
 interface Props {
   children: React.ReactNode
-  alignItems?: 'center' | 'start' | 'end' | 'baseline' | 'stretch'
-  justifyContent?: 'center' | 'start' | 'end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
+  alignItems?: 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch'
+  justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
   flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
   gap?: 'xs' | 'md' | 'xl'
   rowGap?: 'xs' | 'md' | 'xl'
