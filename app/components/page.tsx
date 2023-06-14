@@ -7,6 +7,7 @@ import Text from '@/app/aurora/components/text'
 import WidgetWrapper from '@/app/aurora/components/widget-wrapper'
 import Flexbox from '@/app/aurora/components/flexbox'
 import Icon from '@/app/aurora/components/icon'
+import Card from '@/app/aurora/components/card'
 
 import globalStyles from '@/app/global.module.sass'
 
@@ -24,7 +25,15 @@ export default function Component() {
       />
       <main>
         <Section title="Card">
-          ...
+          <Card>
+            <Text>Hello world</Text>
+          </Card>
+          <Card fullWidth>
+            <Flexbox alignItems="center" justifyContent="space-between">
+              <Text>Text 1</Text>
+              <Text>Text 2</Text>
+            </Flexbox>
+          </Card>
         </Section>
         <Section title="Checkbox">
           ...
