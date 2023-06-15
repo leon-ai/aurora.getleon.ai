@@ -8,6 +8,7 @@ import WidgetWrapper from '@/app/aurora/components/widget-wrapper'
 import Flexbox from '@/app/aurora/components/flexbox'
 import Icon from '@/app/aurora/components/icon'
 import Card from '@/app/aurora/components/card'
+import Badge from '@/app/aurora/components/badge'
 
 import globalStyles from '@/app/global.module.sass'
 
@@ -24,6 +25,12 @@ export default function Component() {
           your journey with Leon.</>}
       />
       <main>
+        <Section title="Badge">
+            <Badge>Edited</Badge>
+            <Badge color="yellow">Warning</Badge>
+            <Badge color="red">Danger</Badge>
+            <Badge color="green">Success</Badge>
+        </Section>
         <Section title="Card">
           <Card>
             <Text>Hello world</Text>
