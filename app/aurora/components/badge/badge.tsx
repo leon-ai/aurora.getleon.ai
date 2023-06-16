@@ -2,10 +2,9 @@ import type React from 'react'
 import classNames from 'classnames'
 
 import type { IconType } from '../../lib/types'
+import { Icon, Flexbox } from '../index'
 
 import './badge.sass'
-import Icon from '@/app/aurora/components/icon'
-import Flexbox from '@/app/aurora/components/flexbox'
 
 interface Props {
   children: React.ReactNode
@@ -14,7 +13,7 @@ interface Props {
   iconType?: IconType
 }
 
-export default function Badge({
+export function Badge({
   children,
   color,
   iconName,

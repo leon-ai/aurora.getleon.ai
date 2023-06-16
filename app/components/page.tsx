@@ -3,12 +3,14 @@ import type { Metadata } from 'next'
 import Header from '@/app/components/header'
 import Section from '@/app/components/section'
 
-import Text from '@/app/aurora/components/text'
-import WidgetWrapper from '@/app/aurora/components/widget-wrapper'
-import Flexbox from '@/app/aurora/components/flexbox'
-import Icon from '@/app/aurora/components/icon'
-import Card from '@/app/aurora/components/card'
-import Badge from '@/app/aurora/components/badge'
+import {
+  Badge,
+  Card,
+  Flexbox,
+  Icon,
+  Text,
+  WidgetWrapper
+} from '@/app/aurora'
 
 import globalStyles from '@/app/global.module.sass'
 
@@ -74,6 +76,11 @@ export default function Component() {
           ...
         </Section>
         <Section title="Loader">
+          ...
+        </Section>
+        <Section title="Progress">
+          Circular progress
+          Progress bar
           ...
         </Section>
         <Section title="Radio">

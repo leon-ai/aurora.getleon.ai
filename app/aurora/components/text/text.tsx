@@ -21,7 +21,7 @@ interface Props {
   secondary?: boolean
 }
 
-export default function Text({
+export function Text({
   children,
   fontSize,
   fontWeight,

@@ -8,7 +8,7 @@ interface Props {
   fullWidth?: boolean
 }
 
-export default function Card({
+export function Card({
   children,
   fullWidth
 }: Props) {

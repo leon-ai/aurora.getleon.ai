@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactNode
 }
 
-export default function WidgetWrapper({
+export function WidgetWrapper({
   children
 }: Props) {
   return (

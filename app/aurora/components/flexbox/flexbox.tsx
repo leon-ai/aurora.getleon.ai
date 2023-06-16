@@ -13,7 +13,7 @@ interface Props {
   columnGap?: 'xs' | 'sm' | 'md' | 'xl'
 }
 
-export default function Flexbox({
+export function Flexbox({
   children,
   alignItems,
   justifyContent,

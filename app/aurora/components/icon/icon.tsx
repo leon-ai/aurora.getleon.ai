@@ -27,7 +27,7 @@ const REMIX_SIZE_MAPPING = {
 /**
  * @see https://remixicon.com/
  */
-export default function Icon({
+export function Icon({
   name,
   svg,
   type = 'line',
