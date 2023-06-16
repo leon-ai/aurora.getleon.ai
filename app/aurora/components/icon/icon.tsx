@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import type { Color, Size } from '../../lib/types'
+import type { Color, Size, IconType } from '../../lib/types'
 
 import './icon.sass'
 
 interface Props {
   name?: string
   svg?: React.ReactNode
-  type?: 'line' | 'fill'
+  type?: IconType
   color?: Color
   size?: Size | 'xxl'
   bgShape?: 'square' | 'circle'
@@ -37,14 +37,9 @@ export default function Icon({
   bgColor
 }: Props) {
   let iconClassName = `ri-${name}`
-  let backgroundColor
 
   if (type) {
     iconClassName = `${iconClassName}-${type}`
-  }
-
-  if (bgColor) {
-    backgroundColor = bgColor
   }
 
   return (

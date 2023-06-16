@@ -28,8 +28,8 @@ export default function Component() {
         <Section title="Badge">
             <Badge>Edited</Badge>
             <Badge color="yellow">Warning</Badge>
-            <Badge color="red">Danger</Badge>
-            <Badge color="green">Success</Badge>
+            <Badge color="red" iconName="error-warning" iconType="fill">Danger</Badge>
+            <Badge color="green" iconName="check">Success</Badge>
         </Section>
         <Section title="Card">
           <Card>

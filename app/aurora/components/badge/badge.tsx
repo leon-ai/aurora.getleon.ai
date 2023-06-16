@@ -1,17 +1,24 @@
 import type React from 'react'
 import classNames from 'classnames'
 
+import type { IconType } from '../../lib/types'
+
 import './badge.sass'
+import Icon from '@/app/aurora/components/icon'
+import Flexbox from '@/app/aurora/components/flexbox'
 
 interface Props {
   children: React.ReactNode
   color?: 'blue' | 'green' | 'red' | 'yellow'
-  // TODO: icon
+  iconName?: string
+  iconType?: IconType
 }
 
 export default function Badge({
   children,
-  color
+  color,
+  iconName,
+  iconType = 'line'
 }: Props) {
   return (
     <div
@@ -19,7 +26,14 @@ export default function Badge({
         [`aurora-badge--${color}`]: color
       })}
     >
-      {children}
+      {iconName ? (
+        <Flexbox alignItems="center" justifyContent="center" gap="xs">
+          <Icon name={iconName} type={iconType} size="sm" />
+          <i>{children}</i>
+        </Flexbox>
+      ) : (
+        children
+      )}
     </div>
   )
 }
