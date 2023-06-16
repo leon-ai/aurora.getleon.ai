@@ -7,8 +7,11 @@
     cursor: pointer
     background-color: transparent
     border: none
+    margin-right: var(--a-space-md)
+    padding: 0
     padding-bottom: var(--a-space-xs)
-    &[data-selected]
+    transition: color var(--a-transition-duration-main) var(--a-transition-timing-main)
+    &:hover, &[data-selected]
       color: var(--a-color-text)
     &[disabled]
       cursor: not-allowed
