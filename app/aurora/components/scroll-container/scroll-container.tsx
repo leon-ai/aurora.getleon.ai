@@ -16,7 +16,7 @@ export function ScrollContainer({
       <div className="aurora-scroll-container-scrollview">
         {children}
       </div>
-      <div className="aurora-scroll-container-shadow" />
+      <div className="aurora-scroll-container-mask" />
     </div>
   )
 }
