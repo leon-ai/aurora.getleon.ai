@@ -8,6 +8,10 @@ import {
   Card,
   Flexbox,
   Icon,
+  Tab,
+  TabContent,
+  TabGroup,
+  TabList,
   Text,
   WidgetWrapper
 } from '@/app/aurora'
@@ -28,10 +32,10 @@ export default function Component() {
       />
       <main>
         <Section title="Badge">
-            <Badge>Edited</Badge>
-            <Badge color="yellow">Warning</Badge>
-            <Badge color="red" iconName="error-warning" iconType="fill">Danger</Badge>
-            <Badge color="green" iconName="check">Success</Badge>
+          <Badge>Edited</Badge>
+          <Badge color="yellow">Warning</Badge>
+          <Badge color="red" iconName="error-warning" iconType="fill">Danger</Badge>
+          <Badge color="green" iconName="check">Success</Badge>
         </Section>
         <Section title="Card">
           <Card>
@@ -99,7 +103,22 @@ export default function Component() {
           ...
         </Section>
         <Section title="Tabs">
-          ...
+          <TabGroup defaultValue="first">
+            <TabList>
+              <Tab value="first">Tab 1</Tab>
+              <Tab value="second">Tab 2</Tab>
+              <Tab value="third">Tab 3</Tab>
+            </TabList>
+            <TabContent value="first">
+              <Text>Tab 1 content</Text>
+            </TabContent>
+             <TabContent value="second">
+              <Text>Tab 2 content</Text>
+            </TabContent>
+             <TabContent value="third">
+              <Text>Tab 3 content</Text>
+            </TabContent>
+          </TabGroup>
         </Section>
         <Section title="Text">
           <Text fontSize="xs">Text xs</Text>
