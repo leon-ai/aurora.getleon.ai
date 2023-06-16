@@ -1,4 +1,31 @@
 @import '../../../styles/main.sass'
 
 .aurora-tab-group
-  // TODO
+  .aurora-tab
+    color: var(--a-color-text-secondary)
+    font-size: var(--a-font-size-md)
+    cursor: pointer
+    background-color: transparent
+    border: none
+    padding-bottom: var(--a-space-xs)
+    &[data-selected]
+      color: var(--a-color-text)
+    &[disabled]
+      cursor: not-allowed
+      color: var(--a-color-text-tertiary)
+  &--sm .aurora-tab
+    font-size: var(--a-font-size-sm)
+  &--md .aurora-tab
+    font-size: var(--a-font-size-md)
+  &--lg .aurora-tab
+    font-size: var(--a-font-size-lg)
+
+.aurora-tab-indicator-container
+  display: grid
+
+.aurora-tab-indicator
+  justify-self: center
+  width: 6px
+  height: 6px
+  border-radius: var(--a-border-radius-circle)
+  background-color: var(--a-color-white)

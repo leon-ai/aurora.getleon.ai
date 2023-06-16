@@ -107,7 +107,7 @@ export default function Component() {
             <TabList>
               <Tab value="first">Tab 1</Tab>
               <Tab value="second">Tab 2</Tab>
-              <Tab value="third">Tab 3</Tab>
+              <Tab value="third" disabled>Tab 3</Tab>
             </TabList>
             <TabContent value="first">
               <Text>Tab 1 content</Text>
@@ -217,6 +217,22 @@ export default function Component() {
                   </Flexbox>
                 </Flexbox>
               </Card>
+              <TabGroup defaultValue="today" size="sm">
+                <TabList>
+                  <Tab value="today">Today</Tab>
+                  <Tab value="tomorrow">Tomorrow</Tab>
+                  <Tab value="next">Next 7 days</Tab>
+                </TabList>
+                <TabContent value="today">
+                  <Text>Tab 1 content</Text>
+                </TabContent>
+                 <TabContent value="tomorrow">
+                  <Text>Tab 2 content</Text>
+                </TabContent>
+                 <TabContent value="next">
+                  <Text>Tab 3 content</Text>
+                </TabContent>
+              </TabGroup>
             </Flexbox>
           </WidgetWrapper>
         </Section>

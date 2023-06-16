@@ -1,17 +1,24 @@
 import type React from 'react'
-import classNames from 'classnames'
-import { TabList as ArkTabList, type TabListProps } from '@ark-ui/react'
+import {
+  TabIndicator,
+  TabList as ArkTabList,
+  type TabListProps } from '@ark-ui/react'
 
-import './tab-list.sass'
+interface Props extends Pick<TabListProps,
+  'children'
+> {}
 
-export function TabList(props: TabListProps) {
+export function TabList({
+  children
+}: Props) {
   return (
     <ArkTabList
-      className={classNames('aurora-tab-list', {
-        // TODO
-      })}
+      className="aurora-tab-list"
     >
-      {props.children}
+      {children}
+      <TabIndicator className="aurora-tab-indicator-container">
+        <div className="aurora-tab-indicator" />
+      </TabIndicator>
     </ArkTabList>
   )
 }

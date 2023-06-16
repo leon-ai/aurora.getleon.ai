@@ -1,18 +1,24 @@
 import type React from 'react'
-import classNames from 'classnames'
 import { TabTrigger, type TabTriggerProps } from '@ark-ui/react'
 
-import './tab.sass'
+interface Props extends Pick<TabTriggerProps,
+  'children' |
+  'value' |
+  'disabled'
+> {}
 
-export function Tab(props: TabTriggerProps) {
+export function Tab({
+  children,
+  value,
+  disabled
+}: Props) {
   return (
     <TabTrigger
-      className={classNames('aurora-tab', {
-        // TODO
-      })}
-      value={props.value}
+      className="aurora-tab"
+      value={value}
+      disabled={disabled}
     >
-      {props.children}
+      {children}
     </TabTrigger>
   )
 }

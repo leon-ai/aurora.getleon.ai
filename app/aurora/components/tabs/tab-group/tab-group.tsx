@@ -4,15 +4,27 @@ import { Tabs, type TabsProps } from '@ark-ui/react'
 
 import './tab-group.sass'
 
-export function TabGroup(props: TabsProps) {
+interface Props extends Pick<TabsProps,
+  'children' |
+  'defaultValue'
+> {
+  size?: 'sm' | 'md' | 'lg'
+}
+
+export function TabGroup({
+  children,
+  defaultValue,
+  size
+}: Props) {
   return (
     <Tabs
       className={classNames('aurora-tab-group', {
-        // TODO
+        [`aurora-tab-group--${size}`]: size
       })}
-      defaultValue={props.defaultValue}
+      defaultValue={defaultValue}
+      orientation="horizontal"
     >
-      {props.children}
+      {children}
     </Tabs>
   )
 }
