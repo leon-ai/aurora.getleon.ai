@@ -1,0 +1,19 @@
+@import '../../styles/main.sass'
+
+.aurora-scroll-container
+  position: relative
+  width: 100%
+  padding: var(--a-space-sm) 0
+
+.aurora-scroll-container-shadow
+  position: absolute
+  pointer-events: none
+  top: 0
+  right: 0
+  width: 50px
+  height: 100%
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .3), var(--a-color-background-surface-primary))
+
+.aurora-scroll-container-scrollview
+  overflow-y: hidden
+  overflow-x: auto

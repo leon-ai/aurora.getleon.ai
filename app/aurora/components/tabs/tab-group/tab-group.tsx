@@ -6,7 +6,8 @@ import './tab-group.sass'
 
 interface Props extends Pick<TabsProps,
   'children' |
-  'defaultValue'
+  'defaultValue' |
+  'onChange'
 > {
   size?: 'sm' | 'md' | 'lg'
 }
@@ -14,6 +15,7 @@ interface Props extends Pick<TabsProps,
 export function TabGroup({
   children,
   defaultValue,
+  onChange,
   size
 }: Props) {
   return (
@@ -22,6 +24,7 @@ export function TabGroup({
         [`aurora-tab-group--${size}`]: size
       })}
       defaultValue={defaultValue}
+      onChange={onChange}
       orientation="horizontal"
     >
       {children}

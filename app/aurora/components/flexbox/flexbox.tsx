@@ -8,9 +8,9 @@ interface Props {
   alignItems?: 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch'
   justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
   flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
-  gap?: 'xs' | 'sm' | 'md' | 'xl'
-  rowGap?: 'xs' | 'sm' | 'md' | 'xl'
-  columnGap?: 'xs' | 'sm' | 'md' | 'xl'
+  gap?: 'xs' | 'md' | 'xl'
+  rowGap?: 'xs' | 'md' | 'xl'
+  columnGap?: 'xs' | 'md' | 'xl'
 }
 
 export function Flexbox({
