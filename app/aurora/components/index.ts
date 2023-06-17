@@ -1,5 +1,6 @@
 export * from './badge'
 export * from './card'
+export * from './checkbox'
 export * from './flexbox'
 export * from './icon'
 export * from './scroll-container'
