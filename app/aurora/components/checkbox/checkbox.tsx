@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import classNames from 'classnames'
 import {
   Checkbox as ArkCheckbox,
   CheckboxLabel,
@@ -7,6 +6,8 @@ import {
   CheckboxControl,
   type CheckboxProps
 } from '@ark-ui/react'
+
+import { Icon } from '../icon'
 
 import './checkbox.sass'
 
@@ -44,12 +45,13 @@ export function Checkbox({
     >
       {(state) => (
         <>
-          <CheckboxInput className="aurora-checkbox-input" />
+          <CheckboxInput />
           <CheckboxControl className="aurora-checkbox-control">
-            {state.isChecked && <span>✓</span>}
-            {state.isIndeterminate && <span>-</span>}
+            {state.isChecked && <Icon name="check" size="sm" />}
           </CheckboxControl>
-          <CheckboxLabel className="aurora-checkbox-label">{label}</CheckboxLabel>
+          <CheckboxLabel className="aurora-checkbox-label">
+            {label}
+          </CheckboxLabel>
         </>
       )}
     </ArkCheckbox>

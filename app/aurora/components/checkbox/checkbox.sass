@@ -1,4 +1,29 @@
 @import '../../styles/main.sass'
 
-.aurora-checkbox-input
-  background: white
+.aurora-checkbox
+  display: flex
+  align-items: center
+  gap: var(--a-space-sm)
+  cursor: pointer
+  &[data-disabled]
+    cursor: not-allowed
+
+.aurora-checkbox-control
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 20px
+  height: 20px
+  border-radius: var(--a-border-radius-xs)
+  border: 1px solid var(--color-input-border)
+  background-color: var(--a-color-black)
+  &[data-checked]
+    background-color: var(--a-color-blue)
+  &[data-disabled]
+    background-color: var(--a-color-black)
+
+.aurora-checkbox-label
+  color: var(--a-color-text)
+  font-size: var(--a-font-size-md)
+  &[data-disabled]
+    color: var(--a-color-text-disabled)

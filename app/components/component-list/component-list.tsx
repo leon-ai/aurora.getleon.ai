@@ -37,18 +37,20 @@ export default function ComponentList() {
         </Card>
       </Section>
       <Section title="Checkbox">
-        <Checkbox
-          label="This is a checkbox"
-          checked={true}
-          value="test"
-          onChange={(e) => console.log('Checkbox state:', e)}
-        />
-        <Checkbox
-          label="Disabled checkbox"
-          checked={true}
-          value="test2"
-          disabled
-        />
+        <Flexbox flexDirection="column" gap="md">
+          <Checkbox
+            label="This is a checkbox"
+            checked={true}
+            value="test"
+            onChange={(e) => console.log('Checkbox state:', e)}
+          />
+          <Checkbox
+            label="Disabled checkbox"
+            checked={true}
+            value="test2"
+            disabled
+          />
+        </Flexbox>
       </Section>
       <Section title="Icon">
         <Flexbox alignItems="center" gap="xs">
