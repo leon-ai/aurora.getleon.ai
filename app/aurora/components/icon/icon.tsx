@@ -13,6 +13,7 @@ interface Props {
   size?: Size | 'xxl'
   bgShape?: 'square' | 'circle'
   bgColor?: Color
+  animated?: boolean
 }
 
 const REMIX_SIZE_MAPPING = {
@@ -34,7 +35,8 @@ export function Icon({
   color,
   size = 'md',
   bgShape,
-  bgColor
+  bgColor,
+  animated
 }: Props) {
   let iconClassName = `ri-${name}`
 
@@ -48,7 +50,8 @@ export function Icon({
         [`aurora-icon--${size}`]: size,
         [`aurora-icon--${bgShape}`]: bgShape,
         [`aurora-icon--bg-${bgColor}`]: bgColor,
-        [`aurora-icon--${color}`]: color
+        [`aurora-icon--${color}`]: color,
+        'aurora-icon--animated': animated
       })}
     >
       {svg ? (

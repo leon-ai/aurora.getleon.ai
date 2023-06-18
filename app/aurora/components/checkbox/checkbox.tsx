@@ -47,7 +47,7 @@ export function Checkbox({
         <>
           <CheckboxInput />
           <CheckboxControl className="aurora-checkbox-control">
-            {state.isChecked && <Icon name="check" size="sm" />}
+            {state.isChecked && <Icon name="check" size="sm" animated />}
           </CheckboxControl>
           <CheckboxLabel className="aurora-checkbox-label">
             {label}
