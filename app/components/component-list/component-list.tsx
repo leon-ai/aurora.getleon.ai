@@ -52,6 +52,12 @@ export default function ComponentList() {
           <Flexbox gap="md">
             <Checkbox
               label="This is a checkbox"
+              checked={false}
+              value="test"
+              onChange={(e) => console.log('Checkbox state:', e)}
+            />
+            <Checkbox
+              label="This is a checked checkbox"
               checked={true}
               value="test"
               onChange={(e) => console.log('Checkbox state:', e)}
@@ -111,14 +117,16 @@ export default function ComponentList() {
         ...
       </Section>
       <Section title="Radio">
-        <RadioGroup defaultValue="strawberry">
-          <Flexbox gap="md">
-            <Radio label="Strawberry" value="strawberry" />
-            <Radio label="Apple" value="apple" />
-            <Radio label="Lemon" value="lemon" />
-            <Radio label="Orange" value="orange" disabled />
-          </Flexbox>
-        </RadioGroup>
+        <WidgetWrapper>
+          <RadioGroup defaultValue="strawberry">
+            <Flexbox gap="md">
+              <Radio label="Strawberry" value="strawberry" />
+              <Radio label="Apple" value="apple" />
+              <Radio label="Lemon" value="lemon" />
+              <Radio label="Orange" value="orange" disabled />
+            </Flexbox>
+          </RadioGroup>
+        </WidgetWrapper>
       </Section>
       <Section title="Select">
         ...
@@ -133,35 +141,39 @@ export default function ComponentList() {
         ...
       </Section>
       <Section title="Tabs">
-        <TabGroup defaultValue="first">
-          <TabList>
-            <Tab value="first">Tab 1</Tab>
-            <Tab value="second">Tab 2</Tab>
-            <Tab value="third" disabled>Tab 3</Tab>
-          </TabList>
-          <TabContent value="first">
-            <Text>Tab 1 content</Text>
-          </TabContent>
-           <TabContent value="second">
-            <Text>Tab 2 content</Text>
-          </TabContent>
-           <TabContent value="third">
-            <Text>Tab 3 content</Text>
-          </TabContent>
-        </TabGroup>
+        <WidgetWrapper>
+          <TabGroup defaultValue="first">
+            <TabList>
+              <Tab value="first">Tab 1</Tab>
+              <Tab value="second">Tab 2</Tab>
+              <Tab value="third" disabled>Tab 3</Tab>
+            </TabList>
+            <TabContent value="first">
+              <Text>Tab 1 content</Text>
+            </TabContent>
+            <TabContent value="second">
+              <Text>Tab 2 content</Text>
+            </TabContent>
+            <TabContent value="third">
+              <Text>Tab 3 content</Text>
+            </TabContent>
+          </TabGroup>
+        </WidgetWrapper>
       </Section>
       <Section title="Text">
-        <Flexbox gap="xs">
-          <Text fontSize="xs">Text xs</Text>
-          <Text fontSize="sm">Text sm</Text>
-          <Text fontSize="md">Text md</Text>
-          <Text fontSize="lg">Text lg</Text>
-          <Text fontSize="xl">Text xl</Text>
-          <Text>Text</Text>
-          <Text fontWeight="regular">Text regular</Text>
-          <Text fontWeight="semi-bold">Text semi-bold</Text>
-          <Text secondary>Text secondary</Text>
-        </Flexbox>
+        <WidgetWrapper>
+          <Flexbox gap="xs">
+            <Text fontSize="xs">Text xs</Text>
+            <Text fontSize="sm">Text sm</Text>
+            <Text fontSize="md">Text md</Text>
+            <Text fontSize="lg">Text lg</Text>
+            <Text fontSize="xl">Text xl</Text>
+            <Text>Text</Text>
+            <Text fontWeight="regular">Text regular</Text>
+            <Text fontWeight="semi-bold">Text semi-bold</Text>
+            <Text secondary>Text secondary</Text>
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="Textarea">
         ...
