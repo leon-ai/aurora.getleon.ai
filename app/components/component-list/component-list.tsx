@@ -14,6 +14,7 @@ import {
   TabGroup,
   TabList,
   Text,
+  TextInput,
   WidgetWrapper
 } from '@/app/aurora'
 import Section from '@/app/components/section'
@@ -73,8 +74,10 @@ export default function ComponentList() {
       <Section title="Image">
         ...
       </Section>
-      <Section title="Input">
-        ...
+      <Section title="Text Input">
+        <TextInput placeholder="Your Spotify API key" />
+        <TextInput type="email" placeholder="Your email address" hint="Leon will send an email to this email address to notify you once the task is over" />
+        <TextInput placeholder="Test" value="This is a test" disabled />
       </Section>
       <Section title="Link">
         ...
