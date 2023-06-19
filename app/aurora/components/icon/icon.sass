@@ -13,13 +13,8 @@
   transition: opacity var(--a-transition-duration-main) var(--a-transition-timing-main)
 
   &--animated
-    @keyframes aurora-icon-animation
-      0%
-        opacity: 0
-      100%
-        opacity: 1
     opacity: 0
-    animation: aurora-icon-animation var(--a-transition-duration-main) var(--a-transition-timing-main) var(--a-transition-duration-main) forwards
+    animation: aurora-animation-fade-in var(--a-transition-duration-main) var(--a-transition-timing-main) var(--a-transition-duration-main) forwards
 
   &--xs
     width: 12px

@@ -22,7 +22,7 @@ export default function Home() {
               <Icon name="palette" type="line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
               <h2>Colors</h2>
               <p>
-                Discover the strategic use of color in Aurora's<br />
+                Discover the strategic use of color in Aurora&apos;s<br />
                 design system, where every hue is carefully<br />
                 selected to complement its reactive style.
               </p>
@@ -43,7 +43,7 @@ export default function Home() {
               <Icon name="copper-coin-line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
               <h2>Design Tokens</h2>
               <p>
-                Browse Aurora's pre-defined design tokens that ensure consistent visual elements across all components of Leon.
+                Browse Aurora&apos;s pre-defined design tokens that ensure consistent visual elements across all components of Leon.
               </p>
             </Card>
           </Link>
@@ -52,7 +52,7 @@ export default function Home() {
               <Icon name="box-3" type="line" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
               <h2>Iconography</h2>
               <p>
-                Access Aurora's comprehensive collection of<br />
+                Access Aurora&apos;s comprehensive collection of<br />
                 high-quality icons, carefully curated to elevate<br />
                 the design and improve the user experience.
               </p>
@@ -63,7 +63,7 @@ export default function Home() {
               <Icon name="font-color" color="#FFF" size="2x" bgType="square" bgColor="#1C75DB" />
               <h2>Typography</h2>
               <p>
-                Explore Aurora's carefully selected typefaces<br />
+                Explore Aurora&apos;s carefully selected typefaces<br />
                 for optimal legibility and hierarchy.
               </p>
             </Card>

@@ -6,6 +6,8 @@ import {
   Checkbox,
   Flexbox,
   Icon,
+  Radio,
+  RadioGroup,
   ScrollContainer,
   Tab,
   TabContent,
@@ -89,7 +91,14 @@ export default function ComponentList() {
         ...
       </Section>
       <Section title="Radio">
-        ...
+        <RadioGroup defaultValue="strawberry">
+          <Flexbox flexDirection="column" gap="md">
+            <Radio label="Strawberry" value="strawberry" />
+            <Radio label="Apple" value="apple" />
+            <Radio label="Lemon" value="lemon" />
+            <Radio label="Orange" value="orange" disabled />
+          </Flexbox>
+        </RadioGroup>
       </Section>
       <Section title="Select">
         ...
