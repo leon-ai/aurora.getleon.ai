@@ -1,0 +1,27 @@
+@import '../../styles/main.sass'
+
+.aurora-text-input
+  position: relative
+  display: inline-block
+  color: var(--a-color-text)
+  background-color: var(--color-input-background)
+  font-size: var(--a-font-size-md)
+  border: 1px solid var(--color-input-border)
+  border-radius: var(--a-border-radius-md)
+  height: 42px
+  padding: 0 var(--a-space-md)
+  width: 100%
+  outline: none
+  transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main)
+  &:hover
+    border-color: var(--color-input-border-hover)
+    background-color: var(--color-input-background-hover)
+  &:focus
+    border-color: var(--color-input-border-focus)
+    background-color: var(--color-input-background-hover)
+
+  &--disabled, &--disabled:hover
+    color: var(--a-color-text-disabled)
+    background-color: var(--color-input-background)
+    border-color: var(--a-color-black-lighter-2)
+    cursor: not-allowed

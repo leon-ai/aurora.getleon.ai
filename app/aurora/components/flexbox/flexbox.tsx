@@ -5,6 +5,7 @@ import './flexbox.sass'
 
 interface Props {
   children: React.ReactNode
+  display?: 'flex' | 'inline-flex'
   alignItems?: 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch'
   justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
   flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
@@ -15,6 +16,7 @@ interface Props {
 
 export function Flexbox({
   children,
+  display,
   alignItems,
   justifyContent,
   flexDirection,
@@ -25,6 +27,7 @@ export function Flexbox({
   return (
     <div
       className={classNames('aurora-flexbox', {
+        [`aurora-flexbox--${display}`]: display,
         [`aurora-flexbox--align-${alignItems}`]: alignItems,
         [`aurora-flexbox--justify-${justifyContent}`]: justifyContent,
         [`aurora-flexbox--${flexDirection}`]: flexDirection,

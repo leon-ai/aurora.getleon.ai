@@ -26,7 +26,7 @@ export function Badge({
       })}
     >
       {iconName ? (
-        <Flexbox alignItems="center" justifyContent="center" gap="xs">
+        <Flexbox alignItems="center" justifyContent="center" flexDirection="row" gap="xs">
           <Icon name={iconName} type={iconType} size="sm" />
           <i>{children}</i>
         </Flexbox>

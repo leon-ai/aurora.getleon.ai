@@ -16,12 +16,16 @@
   height: 20px
   border-radius: var(--a-border-radius-xs)
   border: 1px solid var(--color-input-border)
-  background-color: var(--a-color-black)
-  transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main)
-  &[data-checked]
-    background-color: var(--a-color-blue)
+  background-color: var(--color-input-background)
+  transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main)
+  &[data-hover]:not([data-checked])
+    border-color: var(--color-input-border-hover)
+    background-color: var(--color-input-background-hover)
+  &[data-checked]:not([data-disabled])
+    border-color: transparent
+    background-color: var(--color-input-border-focus)
   &[data-disabled]
-    background-color: var(--a-color-black)
+    background-color: var(--color-input-background)
 
 .aurora-checkbox-label
   color: var(--a-color-text)
