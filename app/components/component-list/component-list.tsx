@@ -40,20 +40,22 @@ export default function ComponentList() {
               <Button onClick={() => console.log('button clicked')}>Continue</Button>
               <Button iconName="mail">Send</Button>
               <Button iconName="mail" iconPosition="right">Next step</Button>
-              <Button secondary>Secondary button</Button>
               <Button disabled>Disabled</Button>
+              <Button secondary>Secondary button</Button>
+              <Button secondary disabled>Disabled</Button>
               {/*TODO: loader component*/}
               <Button loading>Loading</Button>
               <Button danger>Danger</Button>
+              <Button danger disabled>Disabled</Button>
             </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>
             <Flexbox gap="md">
               <TextInput placeholder="Input 1" />
               <TextInput placeholder="Input 2" />
-              <Flexbox flexDirection="row">
-                <Button type="reset" secondary>Reset</Button>
+              <Flexbox gap="md">
                 <Button type="submit">Submit</Button>
+                <Button type="reset" secondary>Reset</Button>
               </Flexbox>
             </Flexbox>
           </WidgetWrapper>
@@ -182,7 +184,7 @@ export default function ComponentList() {
       </Section>
       <Section title="Radio">
         <WidgetWrapper>
-          <RadioGroup defaultValue="strawberry">
+          <RadioGroup defaultValue="orange">
             <Flexbox gap="md">
               <Radio label="Strawberry" value="strawberry" />
               <Radio label="Apple" value="apple" />

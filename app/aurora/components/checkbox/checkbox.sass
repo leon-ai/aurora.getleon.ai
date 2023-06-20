@@ -21,14 +21,15 @@
   &[data-hover]:not([data-checked])
     border-color: var(--color-input-border-hover)
     background-color: var(--color-input-background-hover)
-  &[data-checked]:not([data-disabled])
+  &[data-checked]
     border-color: transparent
     background-color: var(--color-input-border-focus)
   &[data-disabled]
-    background-color: var(--color-input-background)
+    opacity: var(--a-opacity-disabled)
 
 .aurora-checkbox-label
   color: var(--a-color-text)
   font-size: var(--a-font-size-md)
   &[data-disabled]
-    color: var(--a-color-text-disabled)
+    opacity: var(--a-opacity-disabled)
+    color: inherit

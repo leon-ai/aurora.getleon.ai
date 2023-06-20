@@ -47,14 +47,16 @@
       height: 100%
 
   &--disabled, &--disabled:hover
-    color: var(--a-color-text-disabled)
+    opacity: var(--a-opacity-disabled)
+    color: inherit
     background-color: var(--color-input-background)
-    border-color: var(--a-color-black-lighter-2)
+    border-color: var(--color-input-border)
     cursor: not-allowed
   &--disabled ~ .aurora-text-input-icon-container
-    border-color: var(--a-color-black-lighter-2)
+    opacity: var(--a-opacity-disabled)
     i
-      color: var(--a-color-text-disabled)
+      color: inherit
+      opacity: var(--a-opacity-disabled)
 
   &--with-icon
     padding-left: calc(var(--a-icon-container-width) + var(--a-space-md))
