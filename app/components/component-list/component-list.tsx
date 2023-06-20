@@ -7,6 +7,7 @@ import {
   Checkbox,
   Flexbox,
   Icon,
+  Loader,
   Radio,
   RadioGroup,
   ScrollContainer,
@@ -175,7 +176,9 @@ export default function ComponentList() {
         ...
       </Section>
       <Section title="Loader">
-        ...
+        <WidgetWrapper>
+          <Loader />
+        </WidgetWrapper>
       </Section>
       <Section title="Progress">
         Circular progress

@@ -1,7 +1,7 @@
 import type React from 'react'
 import classNames from 'classnames'
 
-import { Flexbox, Icon } from '..'
+import { Flexbox, Icon, Loader } from '..'
 
 import './button.sass'
 
@@ -40,19 +40,23 @@ export function Button({
       disabled={disabled}
       onClick={onClick}
     >
-      {iconName && iconPosition === 'left' && (
-        <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
-          <Icon name={iconName} type="line" />
-          {children}
-        </Flexbox>
+      {loading ? <Loader /> : (
+        <>
+          {iconName && iconPosition === 'left' && (
+            <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
+              <Icon name={iconName} type="line" />
+              {children}
+            </Flexbox>
+          )}
+          {iconName && iconPosition === 'right' && (
+            <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
+              {children}
+              <Icon name={iconName} type="line" />
+            </Flexbox>
+          )}
+          {!iconName && children}
+        </>
       )}
-      {iconName && iconPosition === 'right' && (
-        <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
-          {children}
-          <Icon name={iconName} type="line" />
-        </Flexbox>
-      )}
-      {!iconName && children}
     </button>
   )
 }

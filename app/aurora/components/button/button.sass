@@ -26,3 +26,11 @@
   &--disabled
     opacity: var(--a-opacity-disabled)
     cursor: not-allowed
+
+  &--loading
+    pointer-events: none
+    opacity: var(--a-opacity-disabled)
+
+  .aurora-loader
+    &::before, &::after
+      background-color: var(--a-color-white)
