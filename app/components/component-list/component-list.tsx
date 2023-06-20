@@ -96,8 +96,28 @@ export default function ComponentList() {
         <WidgetWrapper>
           {/* TODO: iconName */}
           <Flexbox gap="md" display="inline-flex" fullWidth>
-            <TextInput placeholder="Your Spotify API key" onChange={(value) => console.log('Text input value:', value)} />
-            <TextInput type="email" placeholder="Your email address" hint="Leon will notify you there once the task is over." />
+            <TextInput
+              type="password"
+              placeholder="Your password"
+            />
+            <TextInput
+              placeholder="Your Spotify API key"
+              iconName="key-2"
+              onChange={(value) => console.log('Text input value:', value)}
+            />
+            <TextInput
+              type="email"
+              placeholder="Your email address"
+              iconName="mail"
+              hint="Leon will notify you there once the task is over."
+            />
+            <TextInput
+              type="email"
+              placeholder="Your email address"
+              iconName="mail"
+              value="louis@getleon.ai"
+              disabled
+            />
             <TextInput placeholder="Test" value="This is a test" disabled />
           </Flexbox>
         </WidgetWrapper>

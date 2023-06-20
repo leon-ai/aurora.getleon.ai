@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 
-import { Text } from '../text'
+import { Text, Icon } from '..'
 
 import './text-input.sass'
 
@@ -44,9 +44,15 @@ export function TextInput({
           }
         }}
         className={classNames('aurora-text-input', {
-          'aurora-text-input--disabled': disabled
+          'aurora-text-input--disabled': disabled,
+          'aurora-text-input--with-icon': !!iconName
         })}
       />
+      {iconName && (
+        <div className="aurora-text-input-icon-container">
+          <Icon name={iconName} />
+        </div>
+      )}
       {hint && (
         <div className="aurora-text-input-hint-container">
           <Text fontSize="xs" tertiary>{hint}</Text>

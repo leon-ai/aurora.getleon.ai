@@ -1,6 +1,9 @@
 @import '../../styles/main.sass'
 
 .aurora-text-input-container
+  --a-input-height: 42px
+  --a-icon-container-width: calc(var(--a-input-height) + var(--a-space-sm))
+
   position: relative
   display: flex
   flex-direction: column
@@ -13,7 +16,7 @@
   font-size: var(--a-font-size-md)
   border: 1px solid var(--color-input-border)
   border-radius: var(--a-border-radius-md)
-  height: 42px
+  height: var(--a-input-height)
   padding: 0 var(--a-space-md)
   width: 100%
   outline: none
@@ -21,15 +24,49 @@
   &:hover
     border-color: var(--color-input-border-hover)
     background-color: var(--color-input-background-hover)
+  &:hover:not([disabled]) ~ .aurora-text-input-icon-container
+    border-color: var(--color-input-border-hover)
   &:focus
     border-color: var(--color-input-border-focus)
     background-color: var(--color-input-background-hover)
+    &:focus:not([disabled])
+      &~ .aurora-text-input-icon-container
+        border-color: var(--color-input-border-focus)
+        i
+          color: var(--a-color-blue)
+  &:placeholder-shown ~ .aurora-text-input-icon-container i
+    color: var(--color-secondary-white)
 
   &--disabled, &--disabled:hover
     color: var(--a-color-text-disabled)
     background-color: var(--color-input-background)
     border-color: var(--a-color-black-lighter-2)
     cursor: not-allowed
+  &--disabled ~ .aurora-text-input-icon-container
+    border-color: var(--a-color-black-lighter-2)
+    i
+      color: var(--a-color-text-disabled)
+
+  &--with-icon
+    padding-left: calc(var(--a-icon-container-width) + var(--a-space-md))
+
+.aurora-text-input-icon-container
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  color: var(--a-color-text)
+  pointer-events: none
+  border-right: 1px solid var(--color-input-border)
+  width: var(--a-icon-container-width)
+  height: var(--a-input-height)
+  transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main)
+  i
+    color: var(--a-color-text)
+    transition: color var(--a-transition-duration-main) var(--a-transition-timing-main)
 
 .aurora-text-input-hint-container
   padding-left: var(--a-space-md)
