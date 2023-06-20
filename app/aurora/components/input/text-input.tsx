@@ -12,7 +12,9 @@ interface Props {
   iconName?: string
   hint?: string
   disabled?: boolean
+  height?: number | 'auto'
   maxLength?: number
+  multiline?: boolean
   onChange?: (value: string) => void
 }
 
@@ -23,34 +25,68 @@ export function TextInput({
   hint,
   value,
   disabled,
-  maxLength = 64,
+  height = 'auto',
+  maxLength,
+  multiline,
   onChange
 }: Props) {
   const [inputValue, setInputValue] = useState(value || '')
 
+  if (!multiline) {
+    if (!maxLength) {
+      maxLength = 64
+    }
+    
+    if (height !== 'auto') {
+      height = 'auto'
+    }
+  }
+
   return (
     <div className="aurora-text-input-container">
-      <input
-        type={type}
-        placeholder={placeholder}
-        value={inputValue}
-        disabled={disabled}
-        maxLength={maxLength}
-        onChange={(e) => {
-          setInputValue(e.target.value)
+      {multiline ? (
+        <textarea
+          placeholder={placeholder}
+          value={inputValue}
+          disabled={disabled}
+          maxLength={maxLength}
+          onChange={(e) => {
+            setInputValue(e.target.value)
 
-          if (onChange) {
-            onChange(e.target.value)
-          }
-        }}
-        className={classNames('aurora-text-input', {
-          'aurora-text-input--disabled': disabled,
-          'aurora-text-input--with-icon': !!iconName
-        })}
-      />
+            if (onChange) {
+              onChange(e.target.value)
+            }
+          }}
+          style={{ height }}
+          className={classNames('aurora-text-input', {
+            'aurora-text-input--multiline': true,
+            'aurora-text-input--disabled': disabled,
+            'aurora-text-input--with-icon': !!iconName
+          })}
+        />
+      ) : (
+        <input
+          type={type}
+          placeholder={placeholder}
+          value={inputValue}
+          disabled={disabled}
+          maxLength={maxLength}
+          onChange={(e) => {
+            setInputValue(e.target.value)
+
+            if (onChange) {
+              onChange(e.target.value)
+            }
+          }}
+          className={classNames('aurora-text-input', {
+            'aurora-text-input--disabled': disabled,
+            'aurora-text-input--with-icon': !!iconName
+          })}
+        />
+      )}
       {iconName && (
         <div className="aurora-text-input-icon-container">
-          <Icon name={iconName} />
+          <Icon name={iconName} type="fill" />
         </div>
       )}
       {hint && (

@@ -94,7 +94,6 @@ export default function ComponentList() {
       </Section>
       <Section title="Text Input">
         <WidgetWrapper>
-          {/* TODO: iconName */}
           <Flexbox gap="md" display="inline-flex" fullWidth>
             <TextInput
               type="password"
@@ -113,12 +112,17 @@ export default function ComponentList() {
             />
             <TextInput
               type="email"
-              placeholder="Your email address"
+              placeholder="Your email address (disabled)"
               iconName="mail"
               value="louis@getleon.ai"
               disabled
             />
-            <TextInput placeholder="Test" value="This is a test" disabled />
+            <TextInput placeholder="Test" value="This is a test (disabled)" disabled />
+            <TextInput placeholder="Multiline" multiline />
+            <TextInput placeholder="Your comment here..." multiline iconName="edit-2" />
+            <TextInput placeholder="Your email content here..." multiline iconName="mail" />
+            <TextInput placeholder="Content here... (custom height)" multiline height={200} />
+            <TextInput placeholder="Multiline (disabled)" multiline disabled />
           </Flexbox>
         </WidgetWrapper>
       </Section>

@@ -37,6 +37,15 @@
   &:placeholder-shown ~ .aurora-text-input-icon-container i
     color: var(--color-secondary-white)
 
+  &--multiline
+    height: calc(var(--a-input-height) * 2)
+    padding: var(--a-space-sm) var(--a-space-md)
+    resize: vertical
+    min-height: calc(var(--a-input-height) * 2)
+    max-height: 512px
+    &~ .aurora-text-input-icon-container
+      height: 100%
+
   &--disabled, &--disabled:hover
     color: var(--a-color-text-disabled)
     background-color: var(--color-input-background)
