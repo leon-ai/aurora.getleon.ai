@@ -19,18 +19,21 @@ interface Props {
   fontSize?: Size
   fontWeight?: 'regular' | 'semi-bold'
   secondary?: boolean
+  tertiary?: boolean
 }
 
 export function Text({
   children,
   fontSize,
   fontWeight,
-  secondary
+  secondary,
+  tertiary
 }: Props) {
   return (
     <p
       className={classNames('aurora-text', {
         'aurora-text--secondary': secondary,
+        'aurora-text--tertiary': tertiary,
         [`aurora-text--${fontSize}`]: fontSize,
         [`aurora-text--${fontWeight}`]: fontWeight
       })}

@@ -94,10 +94,10 @@ export default function ComponentList() {
       </Section>
       <Section title="Text Input">
         <WidgetWrapper>
-          {/* TODO: iconName + hint */}
-          <Flexbox gap="md" display="inline-flex">
+          {/* TODO: iconName */}
+          <Flexbox gap="md" display="inline-flex" fullWidth>
             <TextInput placeholder="Your Spotify API key" onChange={(value) => console.log('Text input value:', value)} />
-            <TextInput type="email" placeholder="Your email address" hint="Leon will send an email to this email address to notify you once the task is over" />
+            <TextInput type="email" placeholder="Your email address" hint="Leon will notify you there once the task is over." />
             <TextInput placeholder="Test" value="This is a test" disabled />
           </Flexbox>
         </WidgetWrapper>
@@ -214,7 +214,7 @@ export default function ComponentList() {
                 <Text fontWeight="semi-bold">Thunderstorms</Text>
               </Flexbox>
               <Card fullWidth>
-                <Flexbox alignItems="center" justifyContent="space-between" flexDirection="row">
+                <Flexbox justifyContent="space-between" flexDirection="row">
                   <Flexbox alignItems="center">
                     <Icon svg={
                       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">

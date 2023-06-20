@@ -1,5 +1,10 @@
 @import '../../styles/main.sass'
 
+.aurora-text-input-container
+  position: relative
+  display: flex
+  flex-direction: column
+
 .aurora-text-input
   position: relative
   display: inline-block
@@ -25,3 +30,7 @@
     background-color: var(--color-input-background)
     border-color: var(--a-color-black-lighter-2)
     cursor: not-allowed
+
+.aurora-text-input-hint-container
+  padding-left: var(--a-space-md)
+  margin-top: var(--a-space-xs)
