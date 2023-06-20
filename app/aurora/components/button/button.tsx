@@ -1,7 +1,7 @@
 import type React from 'react'
 import classNames from 'classnames'
 
-import { Icon } from '..'
+import { Flexbox, Icon } from '..'
 
 import './button.sass'
 
@@ -41,12 +41,18 @@ export function Button({
       onClick={onClick}
     >
       {iconName && iconPosition === 'left' && (
-        <Icon name={iconName} type="line" />
+        <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
+          <Icon name={iconName} type="line" />
+          {children}
+        </Flexbox>
       )}
-      {children}
       {iconName && iconPosition === 'right' && (
-        <Icon name={iconName} />
+        <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
+          {children}
+          <Icon name={iconName} type="line" />
+        </Flexbox>
       )}
+      {!iconName && children}
     </button>
   )
 }

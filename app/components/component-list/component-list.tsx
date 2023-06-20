@@ -39,7 +39,7 @@ export default function ComponentList() {
             <Flexbox gap="md">
               <Button onClick={() => console.log('button clicked')}>Continue</Button>
               <Button iconName="mail">Send</Button>
-              <Button iconName="mail" iconPosition="right">Next step</Button>
+              <Button iconName="arrow-right" iconPosition="right">Next step</Button>
               <Button disabled>Disabled</Button>
               <Button secondary>Secondary button</Button>
               <Button secondary disabled>Disabled</Button>
