@@ -2,6 +2,7 @@
 
 import {
   Badge,
+  Button,
   Card,
   Checkbox,
   Flexbox,
@@ -31,6 +32,45 @@ export default function ComponentList() {
             <Badge color="green" iconName="check">Success</Badge>
           </Flexbox>
         </WidgetWrapper>
+      </Section>
+      <Section title="Button">
+        <Flexbox flexDirection="row" gap="xl">
+          <WidgetWrapper>
+            <Flexbox gap="md">
+              <Button onClick={() => console.log('button clicked')}>Continue</Button>
+              <Button iconName="mail">Send</Button>
+              <Button iconName="mail" iconPosition="right">Next step</Button>
+              <Button secondary>Secondary button</Button>
+              <Button disabled>Disabled</Button>
+              {/*TODO: loader component*/}
+              <Button loading>Loading</Button>
+              <Button danger>Danger</Button>
+            </Flexbox>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <Flexbox gap="md">
+              <TextInput placeholder="Input 1" />
+              <TextInput placeholder="Input 2" />
+              <Flexbox flexDirection="row">
+                <Button type="reset" secondary>Reset</Button>
+                <Button type="submit">Submit</Button>
+              </Flexbox>
+            </Flexbox>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <Flexbox gap="md">
+              <Button>
+                <Icon name="skip-left" size="md" />
+              </Button>
+              <Button>
+                <Icon bgShape="circle" bgColor="blue" name="play" size="xl" />
+              </Button>
+              <Button>
+                <Icon name="skip-right" size="md" />
+              </Button>
+            </Flexbox>
+          </WidgetWrapper>
+        </Flexbox>
       </Section>
       <Section title="Card">
         <WidgetWrapper>
@@ -198,9 +238,6 @@ export default function ComponentList() {
             <Text secondary>Text secondary</Text>
           </Flexbox>
         </WidgetWrapper>
-      </Section>
-      <Section title="Textarea">
-        ...
       </Section>
       <Section title="Widget Wrapper">
         <Flexbox gap="md">

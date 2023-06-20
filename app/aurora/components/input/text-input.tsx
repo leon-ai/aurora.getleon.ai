@@ -36,7 +36,7 @@ export function TextInput({
     if (!maxLength) {
       maxLength = 64
     }
-    
+
     if (height !== 'auto') {
       height = 'auto'
     }
