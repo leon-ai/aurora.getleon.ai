@@ -11,7 +11,7 @@ interface Props {
   hint?: string
   disabled?: boolean
   maxLength?: number
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
+  onChange?: (value: string) => void
 }
 
 export function TextInput({
@@ -37,7 +37,7 @@ export function TextInput({
         setInputValue(e.target.value)
 
         if (onChange) {
-          onChange(e)
+          onChange(e.target.value)
         }
       }}
       className={classNames('aurora-text-input', {
