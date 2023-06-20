@@ -41,7 +41,6 @@ export function Button({
       onClick={onClick}
     >
       {iconName && iconPosition === 'left' && (
-        // TODO: icon type: fill or line
         <Icon name={iconName} type="line" />
       )}
       {children}
