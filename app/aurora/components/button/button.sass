@@ -11,9 +11,12 @@
   border: none
   cursor: pointer
   padding: 0 var(--a-space-lg)
-  transition: opacity var(--a-transition-duration-main) var(--a-transition-timing-main), transform var(--a-transition-duration-main), background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main), color var(--a-transition-duration-main) var(--a-transition-timing-main)
+  box-shadow: 0 0 10px 2px transparent
+  transition: opacity var(--a-transition-duration-main) var(--a-transition-timing-main), transform var(--a-transition-duration-main), background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main), color var(--a-transition-duration-main) var(--a-transition-timing-main), box-shadow var(--a-transition-duration-main) var(--a-transition-timing-main)
+  &:hover:not(&--disabled)
+    transform: scale3d(1.01, 1.01, 1.01)
   &:active:not(&--disabled)
-    transform: scale3d(.95, .95, .95)
+    transform: scale3d(.96, .96, .96)
 
   &--primary
     color: var(--a-color-text)

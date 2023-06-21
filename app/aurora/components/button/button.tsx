@@ -55,13 +55,13 @@ export function Button({
       {loading ? <Loader /> : (
         <>
           {iconName && iconPosition === 'left' && (
-            <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
+            <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="xs">
               <Icon name={iconName} type="line" />
               {children}
             </Flexbox>
           )}
           {iconName && iconPosition === 'right' && (
-            <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="md">
+            <Flexbox flexDirection="row" justifyContent="center" alignItems="center" gap="xs">
               {children}
               <Icon name={iconName} type="line" />
             </Flexbox>
