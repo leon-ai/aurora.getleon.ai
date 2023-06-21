@@ -15,6 +15,7 @@ interface Props {
   height?: number | 'auto'
   maxLength?: number
   multiline?: boolean
+  autofocus?: boolean
   onChange?: (value: string) => void
 }
 
@@ -28,6 +29,7 @@ export function TextInput({
   height = 'auto',
   maxLength,
   multiline,
+  autofocus,
   onChange
 }: Props) {
   const [inputValue, setInputValue] = useState(value || '')
@@ -49,6 +51,7 @@ export function TextInput({
           placeholder={placeholder}
           value={inputValue}
           disabled={disabled}
+          autoFocus={autofocus}
           maxLength={maxLength}
           onChange={(e) => {
             setInputValue(e.target.value)
@@ -70,6 +73,7 @@ export function TextInput({
           placeholder={placeholder}
           value={inputValue}
           disabled={disabled}
+          autoFocus={autofocus}
           maxLength={maxLength}
           onChange={(e) => {
             setInputValue(e.target.value)

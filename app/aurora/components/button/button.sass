@@ -13,7 +13,9 @@
   border: none
   cursor: pointer
   padding: 0 var(--a-space-lg)
-  transition: opacity var(--a-transition-duration-main) var(--a-transition-timing-main)
+  transition: opacity var(--a-transition-duration-main) var(--a-transition-timing-main), transform var(--a-transition-duration-main)
+  &:active:not(&--disabled)
+    transform: scale3d(.95, .95, .95)
 
   &--secondary
     background-color: transparent
