@@ -12,6 +12,7 @@ interface Props {
   iconPosition?: 'left' | 'right'
   secondary?: boolean
   danger?: boolean
+  light?: boolean
   disabled?: boolean
   loading?: boolean
   onClick?: () => void
@@ -24,6 +25,7 @@ export function Button({
   iconPosition = 'left',
   secondary,
   danger,
+  light,
   disabled,
   loading,
   onClick
@@ -34,6 +36,8 @@ export function Button({
     variant = 'secondary'
   } else if (danger) {
     variant = 'danger'
+  } else if (light) {
+    variant = 'light'
   }
 
 

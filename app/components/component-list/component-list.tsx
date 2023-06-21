@@ -42,11 +42,14 @@ export default function ComponentList() {
               <Button iconName="mail">Send</Button>
               <Button iconName="arrow-right" iconPosition="right">Next step</Button>
               <Button disabled>Disabled</Button>
-              <Button secondary>Secondary button</Button>
+              <Button secondary iconName="heart">Secondary button</Button>
               <Button secondary disabled>Disabled</Button>
               <Button loading>Loading</Button>
               <Button danger>Danger</Button>
-              <Button danger disabled>Disabled</Button>
+              <Button danger disabled iconName="delete-bin">Disabled</Button>
+              <Button light>Light button</Button>
+              <Button light iconName="arrow-right" iconPosition="right">Next</Button>
+              <Button light disabled>Disabled</Button>
             </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>

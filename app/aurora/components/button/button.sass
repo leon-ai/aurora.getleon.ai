@@ -25,15 +25,25 @@
     background-color: transparent
     color: var(--a-color-accent)
     border: 1px solid var(--a-color-accent)
-    &:hover:not(.aurora-button--disabled)
+    &:hover:not(.aurora-button--disabled), &:hover:not(.aurora-button--disabled) .aurora-icon
       border-color: var(--a-color-accent-hover)
       color: var(--a-color-accent-hover)
+    .aurora-icon
+      color: var(--a-color-accent)
 
   &--danger
     background-color: var(--a-color-background-danger)
     color: var(--a-color-text-danger)
     &:hover:not(.aurora-button--disabled)
       background-color: var(--a-color-danger-hover)
+
+  &--light
+    background-color: transparent
+    color: var(--a-color-accent)
+    &:hover:not(.aurora-button--disabled), &:hover:not(.aurora-button--disabled) .aurora-icon
+      color: var(--a-color-accent-hover)
+    .aurora-icon
+      color: var(--a-color-accent)
 
   &--disabled
     opacity: var(--a-opacity-disabled)
