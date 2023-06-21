@@ -28,14 +28,22 @@ export function Button({
   loading,
   onClick
 }: Props) {
+  let variant = 'primary'
+
+  if (secondary) {
+    variant = 'secondary'
+  } else if (danger) {
+    variant = 'danger'
+  }
+
+
   return (
     <button
       type={type}
       className={classNames('aurora-button', {
-        'aurora-button--secondary': secondary,
-        'aurora-button--danger': danger,
         'aurora-button--disabled': disabled,
-        'aurora-button--loading': loading
+        'aurora-button--loading': loading,
+        [`aurora-button--${variant}`]: variant
       })}
       disabled={disabled}
       onClick={onClick}

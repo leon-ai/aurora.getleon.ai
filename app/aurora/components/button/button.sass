@@ -3,8 +3,6 @@
 .aurora-button
   position: relative
   display: inline-block
-  color: var(--a-color-text)
-  background-color: var(--a-color-accent)
   font-size: var(--a-font-size-md)
   line-height: var(--a-line-height-md)
   font-weight: var(--a-font-weight-semi-bold)
@@ -13,18 +11,29 @@
   border: none
   cursor: pointer
   padding: 0 var(--a-space-lg)
-  transition: opacity var(--a-transition-duration-main) var(--a-transition-timing-main), transform var(--a-transition-duration-main)
+  transition: opacity var(--a-transition-duration-main) var(--a-transition-timing-main), transform var(--a-transition-duration-main), background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main), color var(--a-transition-duration-main) var(--a-transition-timing-main)
   &:active:not(&--disabled)
     transform: scale3d(.95, .95, .95)
+
+  &--primary
+    color: var(--a-color-text)
+    background-color: var(--a-color-accent)
+    &:hover:not(.aurora-button--disabled)
+      background-color: var(--a-color-accent-hover)
 
   &--secondary
     background-color: transparent
     color: var(--a-color-accent)
     border: 1px solid var(--a-color-accent)
+    &:hover:not(.aurora-button--disabled)
+      border-color: var(--a-color-accent-hover)
+      color: var(--a-color-accent-hover)
 
   &--danger
     background-color: var(--a-color-background-danger)
     color: var(--a-color-text-danger)
+    &:hover:not(.aurora-button--disabled)
+      background-color: var(--a-color-danger-hover)
 
   &--disabled
     opacity: var(--a-opacity-disabled)

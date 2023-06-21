@@ -44,7 +44,6 @@ export default function ComponentList() {
               <Button disabled>Disabled</Button>
               <Button secondary>Secondary button</Button>
               <Button secondary disabled>Disabled</Button>
-              {/*TODO: loader component*/}
               <Button loading>Loading</Button>
               <Button danger>Danger</Button>
               <Button danger disabled>Disabled</Button>
