@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import {
   Badge,
   Button,
   Card,
   Checkbox,
+  CircularProgress,
   Flexbox,
   Icon,
   IconButton,
@@ -24,6 +25,7 @@ import {
   WidgetWrapper
 } from '@/app/aurora'
 import Section from '@/app/components/section'
+import { Timer } from '@/app/components/timer'
 
 export default function ComponentList() {
   const [isSending, setIsSending] = useState(false)
@@ -122,7 +124,18 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="Circular Progress">
-        ...
+        <Flexbox gap="md">
+          <WidgetWrapper>
+            <Flexbox gap="md">
+              <CircularProgress value={33} size="sm" />
+              <CircularProgress value={33} />
+              <CircularProgress value={33} size="lg" />
+            </Flexbox>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <Timer value={0} />
+          </WidgetWrapper>
+        </Flexbox>
       </Section>
       <Section title="Icon">
         <WidgetWrapper>
