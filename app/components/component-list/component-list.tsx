@@ -194,7 +194,7 @@ export default function ComponentList() {
                 />
                 <IconButton name="skip-right" size="lg" light secondary iconType="fill" />
               </Flexbox>
-              <IconButton name="repeat" secondary light activated onClick={(isActivated) => console.log('Repeat', isActivated)} />
+              <IconButton name="repeat" secondary light activated={false} onClick={(isActivated) => console.log('Repeat', isActivated)} />
             </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>
