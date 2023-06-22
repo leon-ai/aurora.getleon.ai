@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import {
   Badge,
@@ -136,6 +136,27 @@ export default function ComponentList() {
             <Timer value={0} />
           </WidgetWrapper>
         </Flexbox>
+      </Section>
+      <Section title="Flexbox">
+        <WidgetWrapper>
+          <Flexbox gap="md">
+            <Flexbox flexDirection="row" justifyContent="space-between">
+              <Card><Text>1</Text></Card>
+              <Card><Text>2</Text></Card>
+              <Card><Text>3</Text></Card>
+              <Card><Text>4</Text></Card>
+              <Card><Text>5</Text></Card>
+            </Flexbox>
+            <Flexbox flexDirection="row" gap="md" justifyContent="space-between">
+              <Card fullWidth><Flexbox justifyContent="center" alignItems="center"><Text>1</Text></Flexbox></Card>
+              <Card fullWidth><Flexbox justifyContent="center" alignItems="center"><Text>2</Text></Flexbox></Card>
+              <Card fullWidth><Flexbox justifyContent="center" alignItems="center"><Text>3</Text></Flexbox></Card>
+            </Flexbox>
+            <Flexbox>
+              <Card fullWidth><Flexbox justifyContent="center" alignItems="center"><Text>1</Text></Flexbox></Card>
+            </Flexbox>
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="Icon">
         <WidgetWrapper>
