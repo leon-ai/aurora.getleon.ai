@@ -1,8 +1,6 @@
 @import '../../styles/main.sass'
 
 .aurora-loader
-  --a-loader-size-md: 42px
-
   width: var(--a-loader-size-md)
   height: var(--a-loader-size-md)
   display: inline-block
@@ -17,9 +15,10 @@
     position: absolute
     left: 0
     top: 0
-    animation: aurora-animation-loader 1.4s linear infinite
+    animation: aurora-animation-loader 1s linear infinite
   &::after
-    animation-delay: .5s
+    opacity: 0
+    animation-delay: .4s
 
 @keyframes aurora-animation-loader
   0%

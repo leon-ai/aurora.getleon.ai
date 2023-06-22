@@ -2,7 +2,7 @@
 
 .aurora-tab-group
   .aurora-tab
-    color: var(--a-color-text-secondary)
+    color: var(--a-color-text)
     font-size: var(--a-font-size-md)
     cursor: pointer
     background-color: transparent
@@ -12,7 +12,7 @@
     padding-bottom: var(--a-space-xs)
     transition: color var(--a-transition-duration-main) var(--a-transition-timing-main)
     &:hover, &[data-selected]
-      color: var(--a-color-text)
+      color: var(--a-color-accent)
     &[disabled]
       opacity: var(--a-opacity-disabled)
       cursor: not-allowed
@@ -32,7 +32,7 @@
   width: 6px
   height: 6px
   border-radius: var(--a-border-radius-circle)
-  background-color: var(--a-color-white)
+  background-color: var(--a-color-accent)
 
 .aurora-tab-content
   margin-top: var(--a-space-md)

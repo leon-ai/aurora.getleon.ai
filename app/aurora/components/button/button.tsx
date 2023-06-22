@@ -6,7 +6,7 @@ import { Flexbox, Icon, Loader } from '..'
 import './button.sass'
 
 interface Props {
-  children: React.ReactNode
+  children?: React.ReactNode
   type?: 'button' | 'submit' | 'reset'
   iconName?: string
   iconPosition?: 'left' | 'right'
@@ -39,7 +39,6 @@ export function Button({
   } else if (light) {
     variant = 'light'
   }
-
 
   return (
     <button

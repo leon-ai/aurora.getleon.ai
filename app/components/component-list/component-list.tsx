@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+
 import {
   Badge,
   Button,
@@ -7,6 +9,7 @@ import {
   Checkbox,
   Flexbox,
   Icon,
+  IconButton,
   Loader,
   Radio,
   RadioGroup,
@@ -22,6 +25,10 @@ import {
 import Section from '@/app/components/section'
 
 export default function ComponentList() {
+  const [isSending, setIsSending] = useState(false)
+  const [isSendingIconButton, setIsSendingIconButton] = useState(false)
+  const [isPlayButtonActivated, setIsPlayButtonActivated] = useState(false)
+
   return (
     <>
       <Section title="Badge">
@@ -39,7 +46,17 @@ export default function ComponentList() {
           <WidgetWrapper>
             <Flexbox gap="md">
               <Button onClick={() => console.log('button clicked')}>Continue</Button>
-              <Button iconName="mail">Send</Button>
+              <Button
+                iconName="mail"
+                loading={isSending}
+                onClick={() => {
+                  setIsSending(true)
+
+                  setTimeout(() => {
+                    setIsSending(false)
+                  }, 2000)
+                }}
+              >Send</Button>
               <Button iconName="arrow-right" iconPosition="right">Next step</Button>
               <Button disabled>Disabled</Button>
               <Button secondary iconName="heart">Secondary button</Button>
@@ -60,19 +77,6 @@ export default function ComponentList() {
                 <Button type="submit">Submit</Button>
                 <Button type="reset" secondary>Reset</Button>
               </Flexbox>
-            </Flexbox>
-          </WidgetWrapper>
-          <WidgetWrapper>
-            <Flexbox gap="md">
-              <Button>
-                <Icon name="skip-left" size="md" />
-              </Button>
-              <Button>
-                <Icon bgShape="circle" bgColor="blue" name="play" size="xl" />
-              </Button>
-              <Button>
-                <Icon name="skip-right" size="md" />
-              </Button>
             </Flexbox>
           </WidgetWrapper>
         </Flexbox>
@@ -134,6 +138,75 @@ export default function ComponentList() {
           </Flexbox>
         </WidgetWrapper>
       </Section>
+      <Section title="Icon Button">
+        <Flexbox gap="md">
+          <WidgetWrapper>
+            <Flexbox gap="md">
+              <Flexbox flexDirection="row" gap="md">
+                <IconButton name="mail" loading={isSendingIconButton} onClick={() => {
+                  console.log('button clicked')
+                  setIsSendingIconButton(true)
+
+                  setTimeout(() => {
+                    setIsSendingIconButton(false)
+                  }, 2000)
+                }} />
+                <IconButton name="mail" loading />
+                <IconButton name="mail" disabled />
+              </Flexbox>
+              <Flexbox flexDirection="row" gap="md">
+                <IconButton name="mail" secondary />
+                <IconButton name="mail" shape="circle" secondary />
+                <IconButton name="mail" shape="circle" secondary disabled />
+              </Flexbox>
+              <Flexbox flexDirection="row" gap="md">
+                <IconButton name="delete-bin" danger />
+                <IconButton name="delete-bin" shape="circle" danger />
+                <IconButton name="delete-bin" disabled danger />
+              </Flexbox>
+              <Flexbox flexDirection="row" gap="md">
+                <IconButton name="send-plane" light iconType="line" />
+                <IconButton name="send-plane" light iconType="fill" />
+                <IconButton name="send-plane" light iconType="fill" disabled />
+              </Flexbox>
+              <Flexbox flexDirection="row" gap="md">
+                <IconButton name="send-plane" light secondary iconType="line" />
+                <IconButton name="send-plane" light secondary iconType="fill" />
+                <IconButton name="send-plane" light secondary iconType="fill" disabled />
+              </Flexbox>
+            </Flexbox>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <Flexbox justifyContent="space-between" alignItems="center" flexDirection="row">
+              <IconButton name="shuffle" light secondary activated onClick={(isActivated) => console.log('Shuffle', isActivated)} />
+              <Flexbox flexDirection="row">
+                <IconButton name="skip-left" size="lg" light secondary iconType="fill" />
+                <IconButton
+                  name={isPlayButtonActivated ? 'pause' : 'play'}
+                  size="lg"
+                  shape="circle"
+                  iconType="fill"
+                  activated={false}
+                  onClick={(isActivated) => {
+                    console.log('Play', isActivated)
+                    setIsPlayButtonActivated(isActivated)
+                  }}
+                />
+                <IconButton name="skip-right" size="lg" light secondary iconType="fill" />
+              </Flexbox>
+              <IconButton name="repeat" secondary light activated onClick={(isActivated) => console.log('Repeat', isActivated)} />
+            </Flexbox>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <Flexbox gap="md" flexDirection="row">
+              <IconButton name="mail" size="xs" />
+              <IconButton name="mail" size="sm" />
+              <IconButton name="mail" size="md" />
+              <IconButton name="mail" size="lg" />
+            </Flexbox>
+          </WidgetWrapper>
+        </Flexbox>
+      </Section>
       <Section title="Image">
         ...
       </Section>
@@ -167,7 +240,7 @@ export default function ComponentList() {
             <TextInput placeholder="Your comment here..." multiline iconName="edit-2" />
             <TextInput placeholder="Your email content here..." multiline iconName="mail" />
             <TextInput placeholder="Content here... (custom height)" multiline height={200} />
-            <TextInput placeholder="Multiline (disabled)" multiline disabled />
+            <TextInput placeholder="Multiline (disabled)" value="Multiline (disabled)" multiline disabled />
           </Flexbox>
         </WidgetWrapper>
       </Section>

@@ -5,7 +5,7 @@ import type { Color, Size, IconType } from '../../lib/types'
 
 import './icon.sass'
 
-interface Props {
+export interface Props {
   name?: string
   svg?: React.ReactNode
   type?: IconType
