@@ -11,6 +11,7 @@ import {
   Flexbox,
   Icon,
   IconButton,
+  Image,
   Loader,
   Progress,
   Radio,
@@ -247,7 +248,20 @@ export default function ComponentList() {
         </Flexbox>
       </Section>
       <Section title="Image">
-        ...
+        <WidgetWrapper>
+          <Flexbox gap="md">
+            <Flexbox flexDirection="row" gap="md">
+              <Image src="https://placehold.co/512/333/FFF" width={128} alt="Placeholder" />
+              <Image src="https://placehold.co/512/333/FFF" shape="circle" width={128} alt="Placeholder" />
+            </Flexbox>
+            <Image src="https://placehold.co/512/333/FFF" width="100%" alt="Placeholder" />
+            <Flexbox flexDirection="row" gap="md">
+              <Image src="https://placehold.co/512/333/FFF" width={64} borderColor="white" alt="Placeholder" />
+              <Image src="https://placehold.co/512/333/FFF" width={64} borderColor="blue" alt="Placeholder" />
+              <Image src="https://placehold.co/512/333/FFF" width={64} borderColor="blue" shape="circle" alt="Placeholder" />
+            </Flexbox>
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="Link">
         ...
