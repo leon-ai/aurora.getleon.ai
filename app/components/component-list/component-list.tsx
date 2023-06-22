@@ -11,6 +11,7 @@ import {
   Icon,
   IconButton,
   Loader,
+  Progress,
   Radio,
   RadioGroup,
   ScrollContainer,
@@ -119,6 +120,9 @@ export default function ComponentList() {
             />
           </Flexbox>
         </WidgetWrapper>
+      </Section>
+      <Section title="Circular Progress">
+        ...
       </Section>
       <Section title="Icon">
         <WidgetWrapper>
@@ -256,9 +260,15 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="Progress">
-        Circular progress
-        Progress bar
-        ...
+        <WidgetWrapper>
+          <Flexbox gap="md">
+            <Progress value={72} size="xs" />
+            <Progress value={72} size="sm" />
+            <Progress value={72} />
+            <Progress value={72} size="lg" />
+            <Progress value={72} size="xl" />
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="Radio">
         <WidgetWrapper>

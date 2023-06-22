@@ -1,0 +1,24 @@
+@import '../../styles/main.sass'
+
+.aurora-progress
+  position: relative
+  border-radius: var(--a-border-radius-pill)
+  height: 18px
+  width: 100%
+  background-color: var(--a-color-black)
+
+  &--xs
+    height: 3px
+  &--sm
+    height: 9px
+  &--md
+    height: 18px
+  &--lg
+    height: 24px
+  &--xl
+    height: 36px
+
+  .aurora-progress-value
+    height: 100%
+    border-radius: var(--a-border-radius-pill)
+    background-color: var(--a-color-accent)
