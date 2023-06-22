@@ -17,21 +17,23 @@ export function Timer({ value }: { value: number }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeLeft(prevTimeLeft => {
-        if (prevTimeLeft > 0) {
-          setProgress(prevProgress => prevProgress + (100 / 600))
+      if (progress < 100) {
+        setTimeLeft(prevTimeLeft => {
+          if (prevTimeLeft > 0) {
+            setProgress(prevProgress => prevProgress + (100 / 600))
 
-          return prevTimeLeft - 1
-        } else {
-          clearInterval(interval)
+            return prevTimeLeft - 1
+          } else {
+            clearInterval(interval)
 
-          return prevTimeLeft
-        }
-      });
+            return prevTimeLeft
+          }
+        })
+      }
     }, 1000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [progress])
 
   return (
     <CircularProgress value={progress} size="lg">
@@ -40,5 +42,5 @@ export function Timer({ value }: { value: number }) {
         <Text fontSize="xs" secondary>Total 10 minutes</Text>
       </Flexbox>
     </CircularProgress>
-  );
+  )
 }
