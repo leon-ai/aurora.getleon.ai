@@ -40,7 +40,7 @@ export default function Icon({
     <div
       className="aurora-icon"
       style={{
-        display: 'flex',
+        display: 'inline-flex',
         padding: 13,
         borderRadius,
         backgroundColor,
