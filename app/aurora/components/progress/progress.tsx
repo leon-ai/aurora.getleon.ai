@@ -13,15 +13,20 @@ interface Props {
 
 export function Progress({
   value,
-  orientation,
-  size
+  orientation = 'horizontal',
+  size = 'md'
 }: Props) {
   return (
     <div className={classNames('aurora-progress', {
       [`aurora-progress--${orientation}`]: orientation,
       [`aurora-progress--${size}`]: size
     })}>
-      <div className="aurora-progress-value" style={{ width: `${value}%` }} />
+      <div
+        className="aurora-progress-value"
+        style={{
+          [orientation === 'horizontal' ? 'width' : 'height']: `${value}%`
+        }}
+      />
     </div>
   )
 }
