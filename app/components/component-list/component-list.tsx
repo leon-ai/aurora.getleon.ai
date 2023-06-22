@@ -36,8 +36,9 @@ export default function ComponentList() {
     <>
       <Section title="Badge">
         <WidgetWrapper>
-          <Flexbox justifyContent="space-between" flexDirection="row">
-            <Badge>Edited</Badge>
+          <Flexbox flexDirection="row" gap="xs">
+            <Badge>Normal</Badge>
+            <Badge color="blue">Edited</Badge>
             <Badge color="yellow">Warning</Badge>
             <Badge color="red" iconName="error-warning" iconType="fill">Danger</Badge>
             <Badge color="green" iconName="check">Success</Badge>
