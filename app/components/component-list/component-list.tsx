@@ -12,6 +12,7 @@ import {
   Icon,
   IconButton,
   Image,
+  Link,
   Loader,
   Progress,
   Radio,
@@ -264,7 +265,28 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="Link">
-        ...
+        <WidgetWrapper>
+          <Flexbox gap="md">
+            <Flexbox flexDirection="row" gap="md">
+              <Link href="https://docs.getleon.ai/">Docs</Link>
+              <Link href="https://docs.getleon.ai/">
+                <Icon name="file" />Docs
+              </Link>
+              <Link href="https://docs.getleon.ai/">
+                Next<Icon name="arrow-right" />
+              </Link>
+            </Flexbox>
+            <Flexbox flexDirection="row" gap="md">
+              <Link href="https://docs.getleon.ai/" fontSize="sm">Docs</Link>
+              <Link href="https://docs.getleon.ai/" fontSize="sm">
+                <Icon name="file" size="sm" />Docs
+              </Link>
+              <Link href="https://docs.getleon.ai/" fontSize="sm">
+                Next<Icon name="arrow-right" size="sm" />
+              </Link>
+            </Flexbox>
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="List">
         ...
