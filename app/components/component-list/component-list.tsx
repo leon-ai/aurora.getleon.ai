@@ -227,40 +227,6 @@ export default function ComponentList() {
       <Section title="Image">
         ...
       </Section>
-      <Section title="Text Input">
-        <WidgetWrapper>
-          <Flexbox gap="md" display="inline-flex" fullWidth>
-            <TextInput
-              type="password"
-              placeholder="Your password"
-            />
-            <TextInput
-              placeholder="Your Spotify API key"
-              iconName="key-2"
-              onChange={(value) => console.log('Text input value:', value)}
-            />
-            <TextInput
-              type="email"
-              placeholder="Your email address"
-              iconName="mail"
-              hint="Leon will notify you there once the task is over."
-            />
-            <TextInput
-              type="email"
-              placeholder="Your email address (disabled)"
-              iconName="mail"
-              value="louis@getleon.ai"
-              disabled
-            />
-            <TextInput placeholder="Test" value="This is a test (disabled)" disabled />
-            <TextInput placeholder="Multiline" multiline />
-            <TextInput placeholder="Your comment here..." multiline iconName="edit-2" />
-            <TextInput placeholder="Your email content here..." multiline iconName="mail" />
-            <TextInput placeholder="Content here... (custom height)" multiline height={200} />
-            <TextInput placeholder="Multiline (disabled)" value="Multiline (disabled)" multiline disabled />
-          </Flexbox>
-        </WidgetWrapper>
-      </Section>
       <Section title="Link">
         ...
       </Section>
@@ -271,6 +237,9 @@ export default function ComponentList() {
         <WidgetWrapper>
           <Loader />
         </WidgetWrapper>
+      </Section>
+      <Section title="Modal">
+        ...
       </Section>
       <Section title="Progress">
         <Flexbox flexDirection="row" gap="md">
@@ -352,6 +321,43 @@ export default function ComponentList() {
             <Text secondary>Text secondary</Text>
           </Flexbox>
         </WidgetWrapper>
+      </Section>
+      <Section title="Text Input">
+        <WidgetWrapper>
+          <Flexbox gap="md" display="inline-flex" fullWidth>
+            <TextInput
+              type="password"
+              placeholder="Your password"
+            />
+            <TextInput
+              placeholder="Your Spotify API key"
+              iconName="key-2"
+              onChange={(value) => console.log('Text input value:', value)}
+            />
+            <TextInput
+              type="email"
+              placeholder="Your email address"
+              iconName="mail"
+              hint="Leon will notify you there once the task is over."
+            />
+            <TextInput
+              type="email"
+              placeholder="Your email address (disabled)"
+              iconName="mail"
+              value="louis@getleon.ai"
+              disabled
+            />
+            <TextInput placeholder="Test" value="This is a test (disabled)" disabled />
+            <TextInput placeholder="Multiline" multiline />
+            <TextInput placeholder="Your comment here..." multiline iconName="edit-2" />
+            <TextInput placeholder="Your email content here..." multiline iconName="mail" />
+            <TextInput placeholder="Content here... (custom height)" multiline height={200} />
+            <TextInput placeholder="Multiline (disabled)" value="Multiline (disabled)" multiline disabled />
+          </Flexbox>
+        </WidgetWrapper>
+      </Section>
+      <Section title="Toast">
+        ...
       </Section>
       <Section title="Widget Wrapper">
         <Flexbox gap="md">
