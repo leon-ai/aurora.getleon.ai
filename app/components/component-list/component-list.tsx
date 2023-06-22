@@ -165,13 +165,13 @@ export default function ComponentList() {
                 <IconButton name="delete-bin" disabled danger />
               </Flexbox>
               <Flexbox flexDirection="row" gap="md">
-                <IconButton name="send-plane" light iconType="line" />
-                <IconButton name="send-plane" light iconType="fill" />
+                <IconButton name="send-plane" light iconType="line" activated={false} onClick={(isActivated) => console.log('isActivated', isActivated)} />
+                <IconButton name="send-plane" light iconType="fill" activated={false} onClick={(isActivated) => console.log('isActivated', isActivated)} />
                 <IconButton name="send-plane" light iconType="fill" disabled />
               </Flexbox>
               <Flexbox flexDirection="row" gap="md">
-                <IconButton name="send-plane" light secondary iconType="line" />
-                <IconButton name="send-plane" light secondary iconType="fill" />
+                <IconButton name="send-plane" light secondary iconType="line" activated={false} onClick={(isActivated) => console.log('isActivated', isActivated)} />
+                <IconButton name="send-plane" light secondary iconType="fill" activated={false} onClick={(isActivated) => console.log('isActivated', isActivated)} />
                 <IconButton name="send-plane" light secondary iconType="fill" disabled />
               </Flexbox>
             </Flexbox>
