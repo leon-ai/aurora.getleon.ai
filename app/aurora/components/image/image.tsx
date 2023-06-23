@@ -12,6 +12,9 @@ interface Props {
   backgroundSize?: 'cover' | 'contain'
   radiusTop?: boolean
   radiusBottom?: boolean
+  overlay?: boolean
+  gradient?: boolean
+  gradientPosition: 'top' | 'bottom' | 'left' | 'right'
 }
 
 export function Image({
@@ -22,7 +25,10 @@ export function Image({
   borderColor,
   backgroundSize,
   radiusTop,
-  radiusBottom
+  radiusBottom,
+  overlay,
+  gradient,
+  gradientPosition
 }: Props) {
   return (
     <div
@@ -30,8 +36,11 @@ export function Image({
         [`aurora-image--${shape}`]: shape,
         [`aurora-image--${borderColor}-border`]: borderColor,
         [`aurora-image--${backgroundSize}`]: backgroundSize,
+        [`aurora-image--gradient-${gradientPosition}`]: gradient,
         'aurora-image--radius-top': radiusTop,
-        'aurora-image--radius-bottom': radiusBottom
+        'aurora-image--radius-bottom': radiusBottom,
+        'aurora-image--overlay': overlay,
+        'aurora-image--gradient': gradient
       })}
       style={{
         width,

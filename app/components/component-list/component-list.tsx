@@ -388,6 +388,9 @@ export default function ComponentList() {
               width="100%"
               height={200}
               radiusTop
+              overlay
+              gradient
+              gradientPosition="bottom"
               src="https://www.marionskitchen.com/wp-content/uploads/2021/08/20201116_Marions-Best-Pancakes-16-819x1024.jpeg"
             />
             <List>
