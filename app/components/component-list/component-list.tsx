@@ -175,10 +175,10 @@ export default function ComponentList() {
             <Icon name="home-heart" size="sm" />
             <Icon name="home-heart" size="md" bgColor="blue" />
             <Icon name="home-heart" size="md" bgColor="secondary-yellow" color="yellow" />
-            <Icon name="home-heart" size="lg" bgShape="circle" />
+            <Icon name="home-heart" size="lg" color="yellow" bgColor="transparent-yellow" />
             <Icon name="home-heart" size="lg" color="blue" />
             <Icon name="home-heart" size="xl" bgColor="blue" />
-            <Icon name="home-heart" size="xl" bgShape="circle" />
+            <Icon name="home-heart" size="xl" color="red" bgColor="transparent-red" />
           </Flexbox>
         </WidgetWrapper>
       </Section>
@@ -304,19 +304,19 @@ export default function ComponentList() {
               <ListHeader>You are all set</ListHeader>
               <ListItem>
                 <Flexbox flexDirection="row" alignItems="center" gap="sm">
-                  <Icon name="check" size="sm" type="fill" bgShape="circle" bgColor="green" />
+                  <Icon name="check" size="sm" type="fill" bgShape="circle" color="green" bgColor="transparent-green" />
                   <Text>Installation is done</Text>
                 </Flexbox>
               </ListItem>
               <ListItem>
                 <Flexbox flexDirection="row" alignItems="center" gap="sm">
-                  <Icon name="check" size="sm" type="fill" bgShape="circle" bgColor="green" />
+                  <Icon name="check" size="sm" type="fill" bgShape="circle" color="green" bgColor="transparent-green" />
                   <Text>Configuration is done</Text>
                 </Flexbox>
               </ListItem>
               <ListItem>
                 <Flexbox flexDirection="row" alignItems="center" gap="sm">
-                  <Icon name="check" size="sm" type="fill" bgShape="circle" bgColor="green" />
+                  <Icon name="check" size="sm" type="fill" bgShape="circle" color="green" bgColor="transparent-green" />
                   <Text>Leon is now ready to use</Text>
                 </Flexbox>
               </ListItem>

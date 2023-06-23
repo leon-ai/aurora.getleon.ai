@@ -28,6 +28,8 @@
   justify-content: flex-start
   padding: var(--a-space-md)
   border-bottom: 1px solid var(--a-color-separator)
+  background-color: transparent
+  transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main)
 
   &--left
     justify-content: flex-start
@@ -36,6 +38,10 @@
 
   &--clickable
     cursor: pointer
+    &:hover
+      background-color: var(--a-color-black)
+    &:hover .aurora-list-item-clickable-icon .aurora-icon
+      color: var(--a-color-accent)
 
   .aurora-list-item-clickable-icon
     align-self: center
@@ -43,7 +49,6 @@
     right: var(--a-space-md)
     cursor: pointer
     z-index: 1
-    // TODO: hover
     .aurora-icon
-      color: var(--a-color-grey-blue-dark)
+      color: var(--a-color-grey-blue)
 
