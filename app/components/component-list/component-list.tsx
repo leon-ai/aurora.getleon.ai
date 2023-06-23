@@ -264,6 +264,14 @@ export default function ComponentList() {
               <Image src="https://placehold.co/512/333/FFF" width={64} height={64} borderColor="blue" />
               <Image src="https://placehold.co/512/333/FFF" width={64} height={64} borderColor="blue" shape="circle" />
             </Flexbox>
+            <Flexbox flexDirection="row" gap="md">
+              <Image src="https://placehold.co/512/333/FFF" gradient width={128} height={128} />
+              <Image src="https://placehold.co/512/333/FFF" gradient gradientPosition="top" width={128} height={128} />
+            </Flexbox>
+            <Flexbox flexDirection="row" gap="md">
+              <Image src="https://placehold.co/512/333/FFF" gradient gradientPosition="left" width={128} height={128} />
+              <Image src="https://placehold.co/512/333/FFF" gradient gradientPosition="right" width={128} height={128} />
+            </Flexbox>
           </Flexbox>
         </WidgetWrapper>
       </Section>
