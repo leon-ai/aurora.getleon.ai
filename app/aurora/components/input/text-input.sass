@@ -11,9 +11,9 @@
   position: relative
   display: inline-block
   color: var(--a-color-text)
-  background-color: var(--color-input-background)
+  background-color: var(--a-color-input-background)
   font-size: var(--a-font-size-md)
-  border: 1px solid var(--color-input-border)
+  border: 1px solid var(--a-color-input-border)
   border-radius: var(--a-border-radius-md)
   height: var(--a-input-size-md)
   padding: 0 var(--a-space-md)
@@ -21,16 +21,16 @@
   outline: none
   transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main)
   &:hover
-    border-color: var(--color-input-border-hover)
-    background-color: var(--color-input-background-hover)
+    border-color: var(--a-color-input-border-hover)
+    background-color: var(--a-color-input-background-hover)
   &:hover:not([disabled]) ~ .aurora-text-input-icon-container
-    border-color: var(--color-input-border-hover)
+    border-color: var(--a-color-input-border-hover)
   &:focus
-    border-color: var(--color-input-border-focus)
-    background-color: var(--color-input-background-hover)
+    border-color: var(--a-color-input-border-focus)
+    background-color: var(--a-color-input-background-hover)
     &:focus:not([disabled])
       &~ .aurora-text-input-icon-container
-        border-color: var(--color-input-border-focus)
+        border-color: var(--a-color-input-border-focus)
         i
           color: var(--a-color-accent)
   &:placeholder-shown ~ .aurora-text-input-icon-container i
@@ -48,8 +48,8 @@
   &--disabled, &--disabled:hover
     opacity: var(--a-opacity-disabled)
     color: inherit
-    background-color: var(--color-input-background)
-    border-color: var(--color-input-border)
+    background-color: var(--a-color-input-background)
+    border-color: var(--a-color-input-border)
     cursor: not-allowed
   &--disabled ~ .aurora-text-input-icon-container
     opacity: var(--a-opacity-disabled)
@@ -70,7 +70,7 @@
   justify-content: center
   color: var(--a-color-text)
   pointer-events: none
-  border-right: 1px solid var(--color-input-border)
+  border-right: 1px solid var(--a-color-input-border)
   width: var(--a-icon-container-width)
   height: var(--a-input-size-md)
   transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main)

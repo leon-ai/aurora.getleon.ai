@@ -13,6 +13,9 @@ import {
   IconButton,
   Image,
   Link,
+  List,
+  ListHeader,
+  ListItem,
   Loader,
   Progress,
   Radio,
@@ -289,7 +292,54 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="List">
-        ...
+        {/*// TODO: select music provider
+        // TODO: simple list with title (with colored checkbox icon on left)
+        // TODO: simple list without title
+        // TODO: todo list
+        // TODO: have option to remove borders? (borderless)
+        // TODO: ingredients list (img, title, description, weight)*/}
+        <Flexbox gap="md">
+          <WidgetWrapper noPadding>
+            <List>
+              <ListHeader>You are all set</ListHeader>
+              <ListItem>
+                <Flexbox flexDirection="row" alignItems="center" gap="sm">
+                  <Icon name="check" size="sm" type="fill" bgShape="circle" bgColor="green" />
+                  <Text>Installation is done</Text>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" alignItems="center" gap="sm">
+                  <Icon name="check" size="sm" type="fill" bgShape="circle" bgColor="green" />
+                  <Text>Configuration is done</Text>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" alignItems="center" gap="sm">
+                  <Icon name="check" size="sm" type="fill" bgShape="circle" bgColor="green" />
+                  <Text>Leon is now ready to use</Text>
+                </Flexbox>
+              </ListItem>
+            </List>
+          </WidgetWrapper>
+          <WidgetWrapper noPadding>
+            <List>
+              <ListHeader align="center">Select your music provider</ListHeader>
+              <ListItem align="center" onClick={() => alert('Spotify') }>
+                <Image src="/spotify.svg" alt="Spotify logo" width={110} height={31} />
+              </ListItem>
+              <ListItem align="center" onClick={() => alert('Apple Music') }>
+                <Image src="/apple-music.svg" alt="Apple Music logo" width={110} height={31} />
+              </ListItem>
+              <ListItem align="center" onClick={() => alert('YouTube Music')}>
+                <Image src="/youtube-music.svg" alt="YouTube Music logo" width={110} height={31} />
+              </ListItem>
+              <ListItem align="center" onClick={() => alert('Deezer')}>
+                <Image src="/deezer.svg" alt="Deezer logo" width={110} height={31} />
+              </ListItem>
+            </List>
+          </WidgetWrapper>
+        </Flexbox>
       </Section>
       <Section title="Loader">
         <WidgetWrapper>

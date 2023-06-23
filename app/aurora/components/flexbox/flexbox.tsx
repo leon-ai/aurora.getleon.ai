@@ -1,6 +1,8 @@
 import type React from 'react'
 import classNames from 'classnames'
 
+import { type Size } from '../../lib/types'
+
 import './flexbox.sass'
 
 interface Props {
@@ -10,9 +12,9 @@ interface Props {
   alignItems?: 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'stretch'
   justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
   flexDirection?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
-  gap?: 'xs' | 'md' | 'xl'
-  rowGap?: 'xs' | 'md' | 'xl'
-  columnGap?: 'xs' | 'md' | 'xl'
+  gap?: Size
+  rowGap?: Size
+  columnGap?: Size
 }
 
 export function Flexbox({
