@@ -36,7 +36,7 @@ export function Image({
         [`aurora-image--${shape}`]: shape,
         [`aurora-image--${borderColor}-border`]: borderColor,
         [`aurora-image--${backgroundSize}`]: backgroundSize,
-        [`aurora-image--gradient-${gradientPosition}`]: gradient,
+        [`aurora-image--gradient-${gradientPosition}`]: gradientPosition,
         'aurora-image--radius-top': radiusTop,
         'aurora-image--radius-bottom': radiusBottom,
         'aurora-image--overlay': overlay,
