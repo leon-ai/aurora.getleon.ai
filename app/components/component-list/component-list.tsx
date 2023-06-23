@@ -293,10 +293,8 @@ export default function ComponentList() {
       </Section>
       <Section title="List">
         {/*// TODO: select music provider
-        // TODO: simple list with title (with colored checkbox icon on left)
         // TODO: simple list without title
         // TODO: todo list
-        // TODO: have option to remove borders? (borderless)
         // TODO: ingredients list (img, title, description, weight)*/}
         <Flexbox gap="md">
           <WidgetWrapper noPadding>
@@ -318,6 +316,28 @@ export default function ComponentList() {
                 <Flexbox flexDirection="row" alignItems="center" gap="sm">
                   <Icon name="check" size="sm" type="fill" bgShape="circle" color="green" bgColor="transparent-green" />
                   <Text>Leon is now ready to use</Text>
+                </Flexbox>
+              </ListItem>
+            </List>
+          </WidgetWrapper>
+          <WidgetWrapper noPadding>
+            <List>
+              <ListItem>
+                <Flexbox flexDirection="row" alignItems="center" gap="sm">
+                  <Icon name="alert" size="sm" type="fill" bgShape="circle" color="yellow" bgColor="transparent-yellow" />
+                  <Text>The voice provider is missing</Text>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" alignItems="center" gap="sm">
+                  <Icon name="close" size="sm" type="fill" bgShape="circle" color="red" bgColor="transparent-red" />
+                  <Text>NLP models are broken</Text>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" alignItems="center" gap="sm">
+                  <Icon name="close" size="sm" type="fill" bgShape="circle" color="red" bgColor="transparent-red" />
+                  <Text>Leon cannot run properly</Text>
                 </Flexbox>
               </ListItem>
             </List>
