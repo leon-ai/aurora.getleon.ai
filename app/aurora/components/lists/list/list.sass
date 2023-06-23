@@ -30,6 +30,8 @@
   border-bottom: 1px solid var(--a-color-separator)
   background-color: transparent
   transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main)
+  &:hover
+    background-color: var(--a-color-black)
 
   &--left
     justify-content: flex-start
@@ -38,8 +40,6 @@
 
   &--clickable
     cursor: pointer
-    &:hover
-      background-color: var(--a-color-black)
     &:hover .aurora-list-item-clickable-icon .aurora-icon
       color: var(--a-color-accent)
 

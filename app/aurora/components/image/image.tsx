@@ -10,6 +10,8 @@ interface Props {
   shape?: 'circle' | 'square'
   borderColor?: 'white' | 'blue'
   backgroundSize?: 'cover' | 'contain'
+  radiusTop?: boolean
+  radiusBottom?: boolean
 }
 
 export function Image({
@@ -18,14 +20,18 @@ export function Image({
   height,
   shape,
   borderColor,
-  backgroundSize
+  backgroundSize,
+  radiusTop,
+  radiusBottom
 }: Props) {
   return (
     <div
       className={classNames('aurora-image', {
         [`aurora-image--${shape}`]: shape,
         [`aurora-image--${borderColor}-border`]: borderColor,
-        [`aurora-image--${backgroundSize}`]: backgroundSize
+        [`aurora-image--${backgroundSize}`]: backgroundSize,
+        'aurora-image--radius-top': radiusTop,
+        'aurora-image--radius-bottom': radiusBottom
       })}
       style={{
         width,

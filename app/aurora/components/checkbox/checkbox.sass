@@ -8,16 +8,21 @@
   &[data-disabled]
     cursor: not-allowed
 
+.aurora-checkbox-placeholder
+  width: var(--a-checkbox-radio-size)
+  height: var(--a-checkbox-radio-size)
+
 .aurora-checkbox-control
   display: flex
   justify-content: center
   align-items: center
-  width: 20px
-  height: 20px
+  width: var(--a-checkbox-radio-size)
+  height: var(--a-checkbox-radio-size)
   border-radius: var(--a-border-radius-xs)
   border: 1px solid var(--a-color-input-border)
   background-color: var(--a-color-input-background)
   transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main)
+
   &[data-hover]:not([data-checked])
     border-color: var(--a-color-input-border-hover)
     background-color: var(--a-color-input-background-hover)
