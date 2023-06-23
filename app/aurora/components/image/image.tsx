@@ -5,34 +5,33 @@ import './image.sass'
 
 interface Props {
   src: string
-  alt: string
   width?: number | string
   height?: number | string
   shape?: 'circle' | 'square'
   borderColor?: 'white' | 'blue'
+  backgroundSize?: 'cover' | 'contain'
 }
 
 export function Image({
   src,
-  alt,
   width,
   height,
   shape,
-  borderColor
+  borderColor,
+  backgroundSize
 }: Props) {
   return (
-    <img
+    <div
       className={classNames('aurora-image', {
         [`aurora-image--${shape}`]: shape,
-        [`aurora-image--${borderColor}-border`]: borderColor
+        [`aurora-image--${borderColor}-border`]: borderColor,
+        [`aurora-image--${backgroundSize}`]: backgroundSize
       })}
       style={{
         width,
-        height
+        height,
+        backgroundImage: `url(${src})`
       }}
-      loading="lazy"
-      alt={alt}
-      src={src}
     />
   )
 }

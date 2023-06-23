@@ -255,14 +255,14 @@ export default function ComponentList() {
         <WidgetWrapper>
           <Flexbox gap="md">
             <Flexbox flexDirection="row" gap="md">
-              <Image src="https://placehold.co/512/333/FFF" width={128} alt="Placeholder" />
-              <Image src="https://placehold.co/512/333/FFF" shape="circle" width={128} alt="Placeholder" />
+              <Image src="https://placehold.co/512/333/FFF" width={128} height={128} />
+              <Image src="https://placehold.co/512/333/FFF" shape="circle" width={128} height={128} />
             </Flexbox>
-            <Image src="https://placehold.co/512/333/FFF" width="100%" alt="Placeholder" />
+            <Image src="https://placehold.co/512/333/FFF" width="100%" height={300} />
             <Flexbox flexDirection="row" gap="md">
-              <Image src="https://placehold.co/512/333/FFF" width={64} borderColor="white" alt="Placeholder" />
-              <Image src="https://placehold.co/512/333/FFF" width={64} borderColor="blue" alt="Placeholder" />
-              <Image src="https://placehold.co/512/333/FFF" width={64} borderColor="blue" shape="circle" alt="Placeholder" />
+              <Image src="https://placehold.co/512/333/FFF" width={64} height={64} borderColor="white" />
+              <Image src="https://placehold.co/512/333/FFF" width={64} height={64} borderColor="blue" />
+              <Image src="https://placehold.co/512/333/FFF" width={64} height={64} borderColor="blue" shape="circle" />
             </Flexbox>
           </Flexbox>
         </WidgetWrapper>
@@ -292,8 +292,7 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="List">
-        {/*// TODO: select music provider
-        // TODO: simple list without title
+        {/*
         // TODO: todo list
         // TODO: ingredients list (img, title, description, weight)*/}
         <Flexbox gap="md">
@@ -346,16 +345,113 @@ export default function ComponentList() {
             <List>
               <ListHeader align="center">Select your music provider</ListHeader>
               <ListItem align="center" onClick={() => alert('Spotify') }>
-                <Image src="/spotify.svg" alt="Spotify logo" width={110} height={31} />
+                <Image src="/spotify.svg" width={110} height={31} backgroundSize="contain" />
               </ListItem>
               <ListItem align="center" onClick={() => alert('Apple Music') }>
-                <Image src="/apple-music.svg" alt="Apple Music logo" width={110} height={31} />
+                <Image src="/apple-music.svg" width={110} height={31} backgroundSize="contain" />
               </ListItem>
               <ListItem align="center" onClick={() => alert('YouTube Music')}>
-                <Image src="/youtube-music.svg" alt="YouTube Music logo" width={110} height={31} />
+                <Image src="/youtube-music.svg" width={110} height={31} backgroundSize="contain" />
               </ListItem>
               <ListItem align="center" onClick={() => alert('Deezer')}>
-                <Image src="/deezer.svg" alt="Deezer logo" width={110} height={31} />
+                <Image src="/deezer.svg" width={110} height={31} backgroundSize="contain" />
+              </ListItem>
+            </List>
+          </WidgetWrapper>
+          ingredients list (img, title, description, weight)
+          <WidgetWrapper noPadding>
+            <Image
+              width="100%"
+              src="https://www.allrecipes.com/thmb/kvvETNZfOtAptH69gUsK6FaKRKA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/21014-Good-old-Fashioned-Pancakes-mfs_001-1fa26bcdedc345f182537d95b6cf92d8.jpg"
+            />
+            <List>
+              <ListHeader>
+                <Icon name="book-2" />
+                Pancakes recipe
+              </ListHeader>
+              <ListItem>
+                <Flexbox flexDirection="row" gap="md" alignItems="center">
+                  <Image
+                    src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_730,h_487/k%2Farchive%2F44462d0c84edfe82ffa94d560d263ad41a9a654a"
+                    width={64} height={64}
+                  />
+                  <Flexbox>
+                    <Text fontWeight="semi-bold">Flour</Text>
+                    <Text secondary>1 ½ cups</Text>
+                  </Flexbox>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" gap="md" alignItems="center">
+                  <Image
+                    src="https://placehold.co/512/333/FFF"
+                    width={64} height={64}
+                  />
+                  <Flexbox>
+                    <Text fontWeight="semi-bold">Baking powder</Text>
+                    <Text secondary>3 ½ teaspoons</Text>
+                  </Flexbox>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" gap="md" alignItems="center">
+                  <Image
+                    src="https://placehold.co/512/333/FFF"
+                    width={64} height={64}
+                  />
+                  <Flexbox>
+                    <Text fontWeight="semi-bold">Sugar</Text>
+                    <Text secondary>1 tablespoon</Text>
+                  </Flexbox>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" gap="md" alignItems="center">
+                  <Image
+                    src="https://placehold.co/512/333/FFF"
+                    width={64} height={64}
+                  />
+                  <Flexbox>
+                    <Text fontWeight="semi-bold">Salt</Text>
+                    <Text secondary>¼ teaspoon</Text>
+                  </Flexbox>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" gap="md" alignItems="center">
+                  <Image
+                    src="https://placehold.co/512/333/FFF"
+                    width={64} height={64}
+                  />
+                  <Flexbox>
+                    <Text fontWeight="semi-bold">Milk</Text>
+                    <Text secondary>1 ¼ cups</Text>
+                  </Flexbox>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" gap="md" alignItems="center">
+                  <Image
+                    src="https://placehold.co/512/333/FFF"
+                    width={64} height={64}
+                  />
+                  <Flexbox>
+                    <Text fontWeight="semi-bold">Butter</Text>
+                    <Text secondary>3 tablespoons butter</Text>
+                  </Flexbox>
+                </Flexbox>
+              </ListItem>
+              <ListItem>
+                <Flexbox flexDirection="row" gap="md" alignItems="center">
+                  <Image
+                    src="https://placehold.co/512/333/FFF"
+                    width={64} height={64}
+                  />
+                  <Flexbox>
+                    <Text fontWeight="semi-bold">Egg</Text>
+                    <Text secondary>1 egg</Text>
+                  </Flexbox>
+                </Flexbox>
               </ListItem>
             </List>
           </WidgetWrapper>
