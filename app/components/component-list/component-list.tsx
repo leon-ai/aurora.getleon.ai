@@ -521,6 +521,52 @@ export default function ComponentList() {
           </RadioGroup>
         </WidgetWrapper>
       </Section>
+      <Section title="Scroll Container">
+        <Flexbox gap="md">
+          <WidgetWrapper>
+            <ScrollContainer>
+              <Flexbox flexDirection="row" gap="md">
+                <Card>
+                  Card 1
+                </Card>
+                <Card>
+                  Card 2
+                </Card>
+                <Card>
+                  Card 3
+                </Card>
+                <Card>
+                  Card 4
+                </Card>
+                <Card>
+                  Card 5
+                </Card>
+              </Flexbox>
+            </ScrollContainer>
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <ScrollContainer orientation="vertical" height={200}>
+              <Flexbox gap="md">
+                <Card>
+                  Card 1
+                </Card>
+                <Card>
+                  Card 2
+                </Card>
+                <Card>
+                  Card 3
+                </Card>
+                <Card>
+                  Card 4
+                </Card>
+                <Card>
+                  Card 5
+                </Card>
+              </Flexbox>
+            </ScrollContainer>
+          </WidgetWrapper>
+        </Flexbox>
+      </Section>
       <Section title="Select">
         ...
       </Section>
