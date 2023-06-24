@@ -3,7 +3,6 @@
 import { useState } from 'react'
 
 import {
-  Badge,
   Button,
   Card,
   Checkbox,
@@ -21,6 +20,7 @@ import {
   Radio,
   RadioGroup,
   ScrollContainer,
+  Status,
   Tab,
   TabContent,
   TabGroup,
@@ -39,17 +39,6 @@ export default function ComponentList() {
 
   return (
     <>
-      <Section title="Badge">
-        <WidgetWrapper>
-          <Flexbox flexDirection="row" gap="xs">
-            <Badge>Normal</Badge>
-            <Badge color="blue">Edited</Badge>
-            <Badge color="yellow">Warning</Badge>
-            <Badge color="red" iconName="error-warning" iconType="fill">Danger</Badge>
-            <Badge color="green" iconName="check">Success</Badge>
-          </Flexbox>
-        </WidgetWrapper>
-      </Section>
       <Section title="Button">
         <Flexbox flexDirection="row" gap="xl">
           <WidgetWrapper>
@@ -537,6 +526,17 @@ export default function ComponentList() {
       </Section>
       <Section title="Slider">
         ...
+      </Section>
+      <Section title="Status">
+        <WidgetWrapper>
+          <Flexbox flexDirection="row" gap="xs">
+            <Status>Normal</Status>
+            <Status color="blue">Edited</Status>
+            <Status color="yellow">Warning</Status>
+            <Status color="red" iconName="error-warning" iconType="fill">Danger</Status>
+            <Status color="green" iconName="check">Success</Status>
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="Switch">
         ...

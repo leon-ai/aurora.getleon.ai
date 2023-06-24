@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import type { IconType } from '../../lib/types'
 import { Icon, Flexbox } from '../index'
 
-import './badge.sass'
+import './status.sass'
 
 interface Props {
   children: React.ReactNode
@@ -13,7 +13,7 @@ interface Props {
   iconType?: IconType
 }
 
-export function Badge({
+export function Status({
   children,
   color,
   iconName,
@@ -21,8 +21,8 @@ export function Badge({
 }: Props) {
   return (
     <div
-      className={classNames('aurora-badge', {
-        [`aurora-badge--${color}`]: color
+      className={classNames('aurora-status', {
+        [`aurora-status--${color}`]: color
       })}
     >
       {iconName ? (
