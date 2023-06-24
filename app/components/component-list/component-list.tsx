@@ -506,20 +506,16 @@ export default function ComponentList() {
         <Flexbox flexDirection="row" gap="md">
           <WidgetWrapper>
             <Flexbox gap="md">
-              <Progress value={72} size="xs" />
               <Progress value={72} size="sm" />
               <Progress value={72} />
               <Progress value={72} size="lg" />
-              <Progress value={72} size="xl" />
             </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>
             <Flexbox flexDirection="row" gap="md">
-              <Progress value={72} size="xs" orientation="vertical" />
               <Progress value={72} size="sm" orientation="vertical" />
               <Progress value={72} orientation="vertical" />
               <Progress value={72} size="lg" orientation="vertical" />
-              <Progress value={72} size="xl" orientation="vertical" />
             </Flexbox>
           </WidgetWrapper>
         </Flexbox>

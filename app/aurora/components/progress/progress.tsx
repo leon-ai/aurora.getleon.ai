@@ -1,14 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import { type Size } from '../../lib/types'
-
 import './progress.sass'
 
 interface Props {
   value: number
   orientation?: 'horizontal' | 'vertical'
-  size?: Size
+  size?: 'sm' | 'md' | 'lg'
 }
 
 export function Progress({
