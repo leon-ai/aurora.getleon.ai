@@ -575,14 +575,24 @@ export default function ComponentList() {
       <Section title="Slider">
         <Flexbox gap="md">
           <WidgetWrapper>
-            <Slider
-              min={0}
-              max={100}
-              step={1}
-              defaultValue={50}
-              value={50}
-              onChange={({ value }) => console.log('value', value)}
-            />
+            <Flexbox gap="lg">
+              <Slider
+                min={0}
+                max={100}
+                step={1}
+                defaultValue={50}
+                value={50}
+                onChange={({ value }) => console.log('value', value)}
+              />
+              <Slider
+                disabled
+                min={0}
+                max={100}
+                step={1}
+                defaultValue={72}
+                value={50}
+              />
+            </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>
             <Slider

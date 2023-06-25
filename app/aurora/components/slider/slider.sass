@@ -7,6 +7,9 @@
     display: flex
     align-items: center
     cursor: pointer
+    &[data-disabled]
+      cursor: not-allowed
+      opacity: var(--a-opacity-disabled)
 
   .aurora-slider-track
     background-color: var(--a-color-background-surface-secondary)

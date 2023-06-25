@@ -16,6 +16,7 @@ interface Props extends Pick<SliderProps,
   'max' |
   'min' |
   'step' |
+  'disabled' |
   'orientation' |
   'onChange'
 > {
@@ -31,6 +32,7 @@ export function Slider({
   max = 100,
   min = 0,
   step = 1,
+  disabled,
   orientation = 'horizontal',
   onChange
 }: Props) {
@@ -52,6 +54,7 @@ export function Slider({
         max={max}
         min={min}
         step={step}
+        disabled={disabled}
         orientation={orientation}
         onChange={(details) => {
           setNewValue(details.value)
