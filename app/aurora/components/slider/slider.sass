@@ -10,10 +10,17 @@
     &[data-disabled]
       cursor: not-allowed
       opacity: var(--a-opacity-disabled)
+    &:hover:not([data-disabled])
+      .aurora-slider-thumb
+        width: calc(var(--a-track-height) * 2.3)
+        height: calc(var(--a-track-height) * 2.3)
+      .aurora-slider-track
+        background-color: var(--a-color-background-surface-secondary-hover)
 
   .aurora-slider-track
     background-color: var(--a-color-background-surface-secondary)
     border-radius: var(--a-border-radius-pill)
+    transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main)
 
   .aurora-slider-range
     background-color: var(--a-color-accent)
@@ -26,6 +33,13 @@
     height: calc(var(--a-track-height) * 2)
     border-radius: var(--a-border-radius-circle)
     background-color: var(--a-color-accent)
+    transition: width var(--a-transition-duration-main) var(--a-transition-timing-main), height var(--a-transition-duration-main) var(--a-transition-timing-main), opacity var(--a-transition-duration-main) var(--a-transition-timing-main)
+
+  &--hidden-thumb
+    &:hover .aurora-slider-thumb
+      opacity: 1
+    .aurora-slider-thumb
+      opacity: 0
 
   &[data-orientation="horizontal"]
     .aurora-slider-control

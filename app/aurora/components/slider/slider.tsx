@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import classNames from 'classnames'
 import {
   Slider as ArkSlider,
   SliderControl,
@@ -22,6 +23,7 @@ interface Props extends Pick<SliderProps,
 > {
   width?: number | string
   height?: number | string
+  hiddenThumb?: boolean
 }
 
 export function Slider({
@@ -34,6 +36,7 @@ export function Slider({
   step = 1,
   disabled,
   orientation = 'horizontal',
+  hiddenThumb,
   onChange
 }: Props) {
   const [newValue, setNewValue] = useState(value)
@@ -48,7 +51,9 @@ export function Slider({
       }}
     >
       <ArkSlider
-        className="aurora-slider"
+        className={classNames('aurora-slider', {
+          'aurora-slider--hidden-thumb': hiddenThumb
+        })}
         value={newValue}
         defaultValue={defaultValue}
         max={max}

@@ -47,7 +47,7 @@ export default function ComponentList() {
             <Flexbox gap="md">
               <Button onClick={() => console.log('button clicked')}>Continue</Button>
               <Button
-                iconName="mail"
+                iconName="send-plane"
                 loading={isSending}
                 onClick={() => {
                   setIsSending(true)
@@ -585,6 +585,14 @@ export default function ComponentList() {
                 onChange={({ value }) => console.log('value', value)}
               />
               <Slider
+                hiddenThumb
+                min={0}
+                max={100}
+                step={1}
+                defaultValue={72}
+                value={72}
+              />
+              <Slider
                 disabled
                 min={0}
                 max={100}
@@ -633,7 +641,13 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="Switch">
-        ...
+        <WidgetWrapper>
+          <Flexbox gap="md">
+            <Switch checked={false} label="Living room light" />
+            <Switch checked={true} label="Kitchen light" />
+            <Switch checked={false} disabled label="Entrance light" />
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="Table">
         ...

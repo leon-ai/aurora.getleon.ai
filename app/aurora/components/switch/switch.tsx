@@ -19,8 +19,6 @@ interface Props extends Pick<SwitchProps,
   label?: string
 }
 
-// TODO: disabled
-
 export function Switch({
   label,
   checked,
@@ -47,7 +45,7 @@ export function Switch({
       <>
         <SwitchInput />
         <SwitchControl className="aurora-switch-control">
-          <SwitchThumb />
+          <SwitchThumb className="aurora-switch-thumb" />
         </SwitchControl>
         <SwitchLabel className="aurora-switch-label">
           {label}
