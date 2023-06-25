@@ -590,21 +590,34 @@ export default function ComponentList() {
                 max={100}
                 step={1}
                 defaultValue={72}
-                value={50}
+                value={72}
               />
             </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>
-            <Slider
-              height={164}
-              min={0}
-              max={100}
-              step={1}
-              defaultValue={50}
-              value={50}
-              orientation="vertical"
-              onChange={({ value }) => console.log('value', value)}
-            />
+            <Flexbox flexDirection="row" gap="lg">
+              <Slider
+                height={164}
+                min={0}
+                max={100}
+                step={1}
+                defaultValue={50}
+                value={50}
+                orientation="vertical"
+                onChange={({ value }) => console.log('value', value)}
+              />
+              <Slider
+                disabled
+                height={164}
+                min={0}
+                max={100}
+                step={1}
+                defaultValue={72}
+                value={72}
+                orientation="vertical"
+                onChange={({ value }) => console.log('value', value)}
+              />
+            </Flexbox>
           </WidgetWrapper>
         </Flexbox>
       </Section>
