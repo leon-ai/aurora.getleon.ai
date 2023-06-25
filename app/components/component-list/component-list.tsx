@@ -22,6 +22,7 @@ import {
   ScrollContainer,
   Slider,
   Status,
+  Switch,
   Tab,
   TabContent,
   TabGroup,
