@@ -20,6 +20,7 @@ import {
   Radio,
   RadioGroup,
   ScrollContainer,
+  Slider,
   Status,
   Tab,
   TabContent,
@@ -571,7 +572,30 @@ export default function ComponentList() {
         ...
       </Section>
       <Section title="Slider">
-        ...
+        <Flexbox gap="md">
+          <WidgetWrapper>
+            <Slider
+              min={0}
+              max={100}
+              step={1}
+              defaultValue={50}
+              value={50}
+              onChange={({ value }) => console.log('value', value)}
+            />
+          </WidgetWrapper>
+          <WidgetWrapper>
+            <Slider
+              height={164}
+              min={0}
+              max={100}
+              step={1}
+              defaultValue={50}
+              value={50}
+              orientation="vertical"
+              onChange={({ value }) => console.log('value', value)}
+            />
+          </WidgetWrapper>
+        </Flexbox>
       </Section>
       <Section title="Status">
         <WidgetWrapper>

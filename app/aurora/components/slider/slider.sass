@@ -1,0 +1,52 @@
+@import '../../styles/main.sass'
+
+.aurora-slider
+  --a-track-height: 10px
+
+  .aurora-slider-control
+    display: flex
+    align-items: center
+    cursor: pointer
+
+  .aurora-slider-track
+    background-color: var(--a-color-background-surface-secondary)
+    border-radius: var(--a-border-radius-pill)
+
+  .aurora-slider-range
+    background-color: var(--a-color-accent)
+    border-radius: var(--a-border-radius-pill)
+
+  .aurora-slider-thumb
+    position: relative
+    outline: none
+    width: calc(var(--a-track-height) * 2)
+    height: calc(var(--a-track-height) * 2)
+    border-radius: var(--a-border-radius-circle)
+    background-color: var(--a-color-accent)
+
+  &[data-orientation="horizontal"]
+    .aurora-slider-control
+      flex-direction: row
+      width: 100%
+      height: var(--a-track-height)
+    .aurora-slider-range
+      height: var(--a-track-height)
+    .aurora-slider-track
+      width: 100%
+      height: var(--a-track-height)
+    .aurora-slider-thumb
+      margin-top: 1px
+
+  &[data-orientation="vertical"]
+    height: 100%
+    .aurora-slider-control
+      flex-direction: column
+      width: var(--a-track-height)
+      height: 100%
+    .aurora-slider-range
+      width: var(--a-track-height)
+    .aurora-slider-track
+      width: var(--a-track-height)
+      height: 100%
+    .aurora-slider-thumb
+      margin-left: 1px
