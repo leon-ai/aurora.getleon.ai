@@ -645,7 +645,7 @@ export default function ComponentList() {
           <Flexbox gap="md">
             <Switch checked={false} label="Living room light" />
             <Switch checked={true} label="Kitchen light" />
-            <Switch checked={false} disabled label="Entrance light" />
+            <Switch checked={true} disabled label="Entrance light" />
           </Flexbox>
         </WidgetWrapper>
       </Section>
