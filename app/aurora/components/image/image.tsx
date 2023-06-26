@@ -14,7 +14,7 @@ interface Props {
   radiusBottom?: boolean
   overlay?: boolean
   gradient?: boolean
-  gradientPosition: 'top' | 'bottom' | 'left' | 'right'
+  gradientPosition?: 'top' | 'bottom' | 'left' | 'right'
 }
 
 export function Image({
