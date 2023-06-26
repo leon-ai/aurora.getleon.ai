@@ -536,19 +536,19 @@ export default function ComponentList() {
             <ScrollContainer>
               <Flexbox flexDirection="row" gap="md">
                 <Card>
-                  Card 1
+                  <Text>Card 1</Text>
                 </Card>
                 <Card>
-                  Card 2
+                  <Text>Card 2</Text>
                 </Card>
                 <Card>
-                  Card 3
+                  <Text>Card 3</Text>
                 </Card>
                 <Card>
-                  Card 4
+                  <Text>Card 4</Text>
                 </Card>
                 <Card>
-                  Card 5
+                  <Text>Card 5</Text>
                 </Card>
               </Flexbox>
             </ScrollContainer>
@@ -557,19 +557,19 @@ export default function ComponentList() {
             <ScrollContainer orientation="vertical" height={200}>
               <Flexbox gap="md">
                 <Card>
-                  Card 1
+                  <Text>Card 1</Text>
                 </Card>
                 <Card>
-                  Card 2
+                  <Text>Card 2</Text>
                 </Card>
                 <Card>
-                  Card 3
+                  <Text>Card 3</Text>
                 </Card>
                 <Card>
-                  Card 4
+                  <Text>Card 4</Text>
                 </Card>
                 <Card>
-                  Card 5
+                  <Text>Card 5</Text>
                 </Card>
               </Flexbox>
             </ScrollContainer>

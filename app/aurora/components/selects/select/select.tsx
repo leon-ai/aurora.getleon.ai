@@ -7,6 +7,7 @@ import {
   Portal,
   type SelectProps
 } from '@ark-ui/react'
+import classNames from 'classnames'
 
 import { Flexbox, Icon } from '../..'
 
@@ -40,10 +41,14 @@ export function Select({
     >
       {({ selectedOption }) => (
         <>
-          <SelectTrigger className="aurora-select-trigger">
+          <SelectTrigger
+            className={classNames('aurora-select-trigger', {
+              'aurora-select-trigger--selected': selectedOption
+            })}
+          >
             <Flexbox flexDirection="row" alignItems="center" justifyContent="space-between">
               <div className="aurora-select-trigger-placeholder-container">
-                {placeholder}
+                {selectedOption ? selectedOption.label : placeholder}
               </div>
               <div className="aurora-select-trigger-icon-container">
                 <Icon name="arrow-down-s" />
@@ -52,7 +57,7 @@ export function Select({
           </SelectTrigger>
           <Portal>
             <SelectPositioner>
-              <SelectContent>
+              <SelectContent className="aurora-select-content">
                 {children}
               </SelectContent>
             </SelectPositioner>

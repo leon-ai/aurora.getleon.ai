@@ -17,6 +17,7 @@ export function SelectOption({
 }: Props) {
   return (
     <ArkSelectOption
+      className="aurora-select-option"
       label={label}
       value={value}
       disabled={disabled}
