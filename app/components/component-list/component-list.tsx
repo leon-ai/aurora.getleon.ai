@@ -29,7 +29,6 @@ import {
   TabList,
   Text,
   TextInput,
-  Toast,
   WidgetWrapper
 } from '@/app/aurora'
 import Section from '@/app/components/section'
@@ -723,12 +722,7 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="Toast">
-        <WidgetWrapper>
-          <Flexbox alignItems="center" justifyContent="center">
-            {/*TODO: display toast on click*/}
-            <Button>Click me</Button>
-          </Flexbox>
-        </WidgetWrapper>
+        WIP...
       </Section>
       <Section title="Widget Wrapper">
         <Flexbox gap="md">
