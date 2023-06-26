@@ -13,6 +13,10 @@
     transform: scale3d(1.03, 1.03, 1.03)
   &.aurora-button:active:not(.aurora-button--disabled, .aurora-button--loading)
     transform: scale3d(.96, .96, .96)
+  &.aurora-button.aurora-button--light:hover:not(.aurora-button--disabled, .aurora-button--loading)
+    transform: scale3d(1.06, 1.06, 1.06)
+  &.aurora-button.aurora-button--light:active:not(.aurora-button--disabled, .aurora-button--loading)
+    transform: scale3d(.96, .96, .96)
 
   &--square
     width: var(--a-button-size-md)
@@ -47,6 +51,10 @@
 
   &.aurora-button--secondary:hover, &.aurora-button--light:hover
     background-color: transparent
+
+
+  &.aurora-button--light:hover .aurora-icon
+    color: var(--a-color-text)
 
   &.aurora-button--light.aurora-button--secondary
     background-color: transparent

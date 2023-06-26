@@ -15,6 +15,9 @@ interface Props {
   gap?: Size
   rowGap?: Size
   columnGap?: Size
+  padding?: boolean
+  paddingX?: boolean
+  paddingY?: boolean
 }
 
 export function Flexbox({
@@ -26,12 +29,18 @@ export function Flexbox({
   flexDirection,
   gap,
   rowGap,
-  columnGap
+  columnGap,
+  padding,
+  paddingX,
+  paddingY
 }: Props) {
   return (
     <div
       className={classNames('aurora-flexbox', {
         'aurora-flexbox--full-width': fullWidth,
+        'aurora-flexbox--padding': padding,
+        'aurora-flexbox--padding-x': paddingX,
+        'aurora-flexbox--padding-y': paddingY,
         [`aurora-flexbox--${display}`]: display,
         [`aurora-flexbox--align-${alignItems}`]: alignItems,
         [`aurora-flexbox--justify-${justifyContent}`]: justifyContent,

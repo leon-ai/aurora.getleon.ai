@@ -218,10 +218,14 @@ export default function ComponentList() {
             </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>
-            <Flexbox justifyContent="space-between" alignItems="center" flexDirection="row">
-              <IconButton name="shuffle" light secondary activated onClick={(isActivated) => console.log('Shuffle', isActivated)} />
+            <Flexbox
+              justifyContent="space-between"
+              alignItems="center"
+              flexDirection="row"
+            >
+              <IconButton name="shuffle" light activated onClick={(isActivated) => console.log('Shuffle', isActivated)} />
               <Flexbox flexDirection="row">
-                <IconButton name="skip-left" size="lg" light secondary iconType="fill" />
+                <IconButton name="skip-left" size="lg" light iconType="fill" />
                 <IconButton
                   name={isPlayButtonActivated ? 'pause' : 'play'}
                   size="lg"
@@ -233,9 +237,9 @@ export default function ComponentList() {
                     setIsPlayButtonActivated(isActivated)
                   }}
                 />
-                <IconButton name="skip-right" size="lg" light secondary iconType="fill" />
+                <IconButton name="skip-right" size="lg" light iconType="fill" />
               </Flexbox>
-              <IconButton name="repeat" secondary light activated={false} onClick={(isActivated) => console.log('Repeat', isActivated)} />
+              <IconButton name="repeat" light activated={false} onClick={(isActivated) => console.log('Repeat', isActivated)} />
             </Flexbox>
           </WidgetWrapper>
           <WidgetWrapper>
@@ -961,6 +965,57 @@ export default function ComponentList() {
                   <Text>Tab 3 content</Text>
                 </TabContent>
               </TabGroup>
+            </Flexbox>
+          </WidgetWrapper>
+          <WidgetWrapper noPadding paddingBottom>
+            <Flexbox gap="lg" alignItems="center">
+              <Image
+                gradient
+                gradientPosition="bottom"
+                width="100%"
+                height={282}
+                src="https://upload.wikimedia.org/wikipedia/en/f/fc/Mockingbird_%28Eminem_song%29_cover.jpg"
+              />
+              <Flexbox alignItems="center">
+                <Text fontSize="lg" fontWeight="semi-bold">Mockingbird</Text>
+                <Text secondary>Eminem</Text>
+              </Flexbox>
+              <Flexbox fullWidth paddingX gap="sm">
+                <Slider
+                  width="100%"
+                  defaultValue={33}
+                  hiddenThumb
+                />
+                <Flexbox flexDirection="row" justifyContent="space-between">
+                  <Text fontSize="xs" secondary>1:44</Text>
+                  <Text fontSize="xs" secondary>4:12</Text>
+                </Flexbox>
+              </Flexbox>
+              <Flexbox
+                justifyContent="space-between"
+                alignItems="center"
+                flexDirection="row"
+                fullWidth
+                paddingX
+              >
+                <IconButton name="shuffle" light activated onClick={(isActivated) => console.log('Shuffle', isActivated)} />
+                <Flexbox flexDirection="row">
+                  <IconButton name="skip-left" size="lg" light iconType="fill" />
+                  <IconButton
+                    name={isPlayButtonActivated ? 'pause' : 'play'}
+                    size="lg"
+                    shape="circle"
+                    iconType="fill"
+                    activated={false}
+                    onClick={(isActivated) => {
+                      console.log('Play', isActivated)
+                      setIsPlayButtonActivated(isActivated)
+                    }}
+                  />
+                  <IconButton name="skip-right" size="lg" light iconType="fill" />
+                </Flexbox>
+                <IconButton name="repeat" light activated={false} onClick={(isActivated) => console.log('Repeat', isActivated)} />
+              </Flexbox>
             </Flexbox>
           </WidgetWrapper>
         </Flexbox>

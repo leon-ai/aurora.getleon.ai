@@ -20,6 +20,7 @@ interface Props {
   fontWeight?: 'regular' | 'semi-bold'
   secondary?: boolean
   tertiary?: boolean
+  textAlign?: 'left' | 'center' | 'right'
 }
 
 export function Text({
@@ -27,13 +28,15 @@ export function Text({
   fontSize,
   fontWeight,
   secondary,
-  tertiary
+  tertiary,
+  textAlign
 }: Props) {
   return (
     <p
       className={classNames('aurora-text', {
         'aurora-text--secondary': secondary,
         'aurora-text--tertiary': tertiary,
+        [`aurora-text--${textAlign}`]: textAlign,
         [`aurora-text--${fontSize}`]: fontSize,
         [`aurora-text--${fontWeight}`]: fontWeight
       })}

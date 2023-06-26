@@ -7,6 +7,7 @@
     display: flex
     align-items: center
     cursor: pointer
+    width: 100%
     &[data-disabled]
       cursor: not-allowed
       opacity: var(--a-opacity-disabled)
@@ -33,7 +34,7 @@
     height: calc(var(--a-track-height) * 2)
     border-radius: var(--a-border-radius-circle)
     background-color: var(--a-color-accent)
-    transition: width var(--a-transition-duration-main) var(--a-transition-timing-main), height var(--a-transition-duration-main) var(--a-transition-timing-main), opacity var(--a-transition-duration-main) var(--a-transition-timing-main)
+    transition: width var(--a-transition-duration-main) var(--a-transition-timing-main), height var(--a-transition-duration-main) var(--a-transition-timing-main)
 
   &--hidden-thumb
     &:hover .aurora-slider-thumb
