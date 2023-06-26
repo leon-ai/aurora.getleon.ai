@@ -56,7 +56,7 @@ export function IconButton({
         [`aurora-icon-button--${size}`]: size,
         [`aurora-icon-button--${shape}`]: shape
       })}
-      disabled={disabled}
+      disabled={disabled || loading}
       onClick={() => {
         if (onClick) {
           if (typeof activated === 'undefined') {

@@ -20,6 +20,8 @@ import {
   Radio,
   RadioGroup,
   ScrollContainer,
+  Select,
+  SelectOption,
   Slider,
   Status,
   Switch,
@@ -133,6 +135,10 @@ export default function ComponentList() {
             <Timer value={0} />
           </WidgetWrapper>
         </Flexbox>
+      </Section>
+      <Section title="Combobox">
+        WIP (+ search with chip)...
+        N.B. create example with LLM list/search
       </Section>
       <Section title="Flexbox">
         <WidgetWrapper>
@@ -491,7 +497,8 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="Modal">
-        ...
+        WIP (need methods from SDK to control)...
+        N.B. make blurred bg
       </Section>
       <Section title="Progress">
         <Flexbox flexDirection="row" gap="md">
@@ -570,7 +577,27 @@ export default function ComponentList() {
         </Flexbox>
       </Section>
       <Section title="Select">
-        ...
+        <WidgetWrapper>
+          <Flexbox gap="md">
+            <Select
+              placeholder="Choose your LLM solution right now!!"
+              onChange={(details) => console.log('Selected', details)}
+            >
+              <SelectOption value="gpt-4" label="GPT-4" />
+              <SelectOption value="gpt-3.5" label="GPT-3.5" />
+              <SelectOption value="claude" label="Claude" />
+              <SelectOption value="falcon-7b" label="Falcon-7B" />
+              <SelectOption value="mpt-7b" label="MPT-7B" disabled />
+              <SelectOption value="dolly-v2-3b" label="Dolly-v2-3B" />
+            </Select>
+            <Select
+              placeholder="Choose your LLM solution"
+              disabled
+            >
+              ...
+            </Select>
+          </Flexbox>
+        </WidgetWrapper>
       </Section>
       <Section title="Slider">
         <Flexbox gap="md">
@@ -649,9 +676,6 @@ export default function ComponentList() {
           </Flexbox>
         </WidgetWrapper>
       </Section>
-      <Section title="Table">
-        ...
-      </Section>
       <Section title="Tabs">
         <WidgetWrapper>
           <TabGroup defaultValue="first">
@@ -722,7 +746,7 @@ export default function ComponentList() {
         </WidgetWrapper>
       </Section>
       <Section title="Toast">
-        WIP...
+        WIP (need methods from SDK to control)...
       </Section>
       <Section title="Widget Wrapper">
         <Flexbox gap="md">

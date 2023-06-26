@@ -1,0 +1,46 @@
+@import '../../../styles/main.sass'
+
+.aurora-select-trigger
+  position: relative
+  display: inline-block
+  cursor: pointer
+  color: var(--a-color-text-placeholder)
+  text-align: left
+  background-color: var(--a-color-input-background)
+  font-size: var(--a-font-size-md)
+  border: 1px solid var(--a-color-input-border)
+  border-radius: var(--a-border-radius-md)
+  height: var(--a-input-size-md)
+  padding: 0 var(--a-space-md)
+  padding-right: 0
+  width: 100%
+  outline: none
+  transition: background-color var(--a-transition-duration-main) var(--a-transition-timing-main), border-color var(--a-transition-duration-main) var(--a-transition-timing-main)
+  &:hover:not([disabled])
+    border-color: var(--a-color-input-border-hover)
+    background-color: var(--a-color-input-background-hover)
+  &[data-expanded]
+    border-color: var(--a-color-input-border-focus)
+    background-color: var(--a-color-input-background-hover)
+    &:not([disabled])
+      .aurora-icon
+        color: var(--a-color-accent)
+        transform: rotate(-180deg)
+  &[disabled]
+    opacity: var(--a-opacity-disabled)
+    cursor: not-allowed
+  &-placeholder-container
+    position: relative
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    width: 100%
+  &-icon-container
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+
+  .aurora-icon
+    color: var(--color-secondary-white)
+

@@ -9,9 +9,9 @@
   justify-content: center
   padding: 0
   text-align: center
-  &.aurora-button:hover:not(.aurora-button--disabled)
+  &.aurora-button:hover:not(.aurora-button--disabled, .aurora-button--loading)
     transform: scale3d(1.03, 1.03, 1.03)
-  &.aurora-button:active:not(.aurora-button--disabled)
+  &.aurora-button:active:not(.aurora-button--disabled, .aurora-button--loading)
     transform: scale3d(.96, .96, .96)
 
   &--square
@@ -53,7 +53,7 @@
     border: none
     .aurora-icon
       color: var(--a-color-white-secondary)
-    &:hover:not(.aurora-button--disabled) .aurora-icon
+    &:hover:not(.aurora-button--disabled, .aurora-button--loading) .aurora-icon
       color: var(--a-color-text)
     &:hover.aurora-icon-button--activated .aurora-icon
       color: var(--a-color-accent)

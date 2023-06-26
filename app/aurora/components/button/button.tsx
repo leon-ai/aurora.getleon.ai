@@ -48,7 +48,7 @@ export function Button({
         'aurora-button--loading': loading,
         [`aurora-button--${variant}`]: variant
       })}
-      disabled={disabled}
+      disabled={disabled || loading}
       onClick={onClick}
     >
       {loading ? <Loader /> : (
