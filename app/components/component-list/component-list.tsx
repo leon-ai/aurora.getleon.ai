@@ -40,6 +40,7 @@ export default function ComponentList() {
   const [isSending, setIsSending] = useState(false)
   const [isSendingIconButton, setIsSendingIconButton] = useState(false)
   const [isPlayButtonActivated, setIsPlayButtonActivated] = useState(false)
+  const [isPlayButton2Activated, setIsPlayButton2Activated] = useState(false)
 
   return (
     <>
@@ -1002,14 +1003,14 @@ export default function ComponentList() {
                 <Flexbox flexDirection="row">
                   <IconButton name="skip-left" size="lg" light iconType="fill" />
                   <IconButton
-                    name={isPlayButtonActivated ? 'pause' : 'play'}
+                    name={isPlayButton2Activated ? 'pause' : 'play'}
                     size="lg"
                     shape="circle"
                     iconType="fill"
                     activated={false}
                     onClick={(isActivated) => {
                       console.log('Play', isActivated)
-                      setIsPlayButtonActivated(isActivated)
+                      setIsPlayButton2Activated(isActivated)
                     }}
                   />
                   <IconButton name="skip-right" size="lg" light iconType="fill" />
