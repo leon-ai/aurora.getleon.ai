@@ -1,3 +1,19 @@
+<p align="center">
+  <img width="800" src="https://getleon.ai/img/aurora-banner.png" />
+</p>
+
+<h1 align="center">
+  Aurora
+</h1>
+
+_<p align="center">The UI bricks that power up Leon.</p>_
+
+<p align="center">
+  <a href="https://aurora-leon-ai.vercel.app/components">aurora-leon-ai.vercel.app/components</a>
+</p>
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
