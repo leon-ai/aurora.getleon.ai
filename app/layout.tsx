@@ -19,7 +19,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
           rel="stylesheet"
         />
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+        <link href="https://aurora.getleon.ai/css/remixicon-3.4.0.css" rel="stylesheet" />
       </head>
       <body>{children}</body>
     </html>
